@@ -2,17 +2,29 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\{Connector, ConnectorInitData};
+use Smolblog\Core\{Connector, ConnectorInitData, Environment};
 use Smolblog\Core\Models\ConnectionCredential;
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
 
+/**
+ * Handle authenticating against the Twitter API
+ */
 class TwitterConnector implements Connector {
+	/**
+	 * Instance of the league/oauth2-client for Twitter
+	 *
+	 * @var TwitterOAuth
+	 */
 	private TwitterOAuth $provider;
 
+	/**
+	 * Create the instance with a Twitter OAuth client
+	 */
 	public function __construct() {
+		$env = Environment::get();
 		$this->provider = new TwitterOAuth([
-			'clientId'          => $env->envVar('TWITTER_APPLICATION_ID'),
-			'clientSecret'      => $env->envVar('TWITTER_APPLICATION_SECRET'),
+			'clientId'     => $env->envVar('TWITTER_APPLICATION_ID'),
+			'clientSecret' => $env->envVar('TWITTER_APPLICATION_SECRET'),
 		]);
 	}
 
@@ -28,6 +40,7 @@ class TwitterConnector implements Connector {
 	/**
 	 * Get the information needed to start an OAuth session with the provider
 	 *
+	 * @param string $callbackUrl URL to pass to Twitter to redirect back to.
 	 * @return ConnectorInitData
 	 */
 	public function getInitializationData(string $callbackUrl): ConnectorInitData {
