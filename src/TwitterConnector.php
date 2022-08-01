@@ -4,6 +4,7 @@ namespace Smolblog\Twitter;
 
 use Smolblog\Core\{Connector, ConnectorInitData};
 use Smolblog\Core\Factories\ConnectionCredentialFactory;
+use Smolblog\Core\Models\ConnectionCredential;
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
 
 /**
@@ -66,7 +67,7 @@ class TwitterConnector implements Connector {
 		]);
 		$twitterUser = $this->provider->getResourceOwner($token);
 
-		$credential = $factory->credentialWith(
+		$credential = $this->factory->credentialWith(
 			provider: $this->slug(),
 			key: $twitterUser->getId(),
 		);
