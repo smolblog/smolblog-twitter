@@ -2,8 +2,8 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\{Connector, ConnectorInitData, Environment};
-use Smolblog\Core\Models\ConnectionCredential;
+use Smolblog\Core\{Connector, ConnectorInitData};
+use Smolblog\Core\Factories\ConnectionCredentialFactory;
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
 
 /**
@@ -11,21 +11,15 @@ use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
  */
 class TwitterConnector implements Connector {
 	/**
-	 * Instance of the league/oauth2-client for Twitter
+	 * Create the connector instance
 	 *
-	 * @var TwitterOAuth
+	 * @param TwitterOAuth                $provider Instance of the OAuth library to use.
+	 * @param ConnectionCredentialFactory $factory  Factory for creating the ConnectionCredential.
 	 */
-	private TwitterOAuth $provider;
-
-	/**
-	 * Create the instance with a Twitter OAuth client
-	 */
-	public function __construct() {
-		$env = Environment::get();
-		$this->provider = new TwitterOAuth([
-			'clientId'     => $env->envVar('TWITTER_APPLICATION_ID'),
-			'clientSecret' => $env->envVar('TWITTER_APPLICATION_SECRET'),
-		]);
+	public function __construct(
+		private TwitterOAuth $provider,
+		private ConnectionCredentialFactory $factory
+	) {
 	}
 
 	/**
@@ -72,10 +66,10 @@ class TwitterConnector implements Connector {
 		]);
 		$twitterUser = $this->provider->getResourceOwner($token);
 
-		$credential = ConnectionCredential::create(withData: [
-			'provider' => $this->slug(),
-			'provider_key' => $twitterUser->getId(),
-		]);
+		$credential = $factory->credentialWith(
+			provider: $this->slug(),
+			key: $twitterUser->getId(),
+		);
 		$credential->user_id = $info['user_id'];
 		$credential->display_name = $twitterUser->getUsername();
 		$credential->details = $token;

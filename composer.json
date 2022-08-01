@@ -1,40 +1,40 @@
 {
-	"name": "smolblog/smolblog-twitter",
-	"description": "Twitter functionality for Smolblog",
-	"type": "library",
-	"license": "AGPL-3.0-only",
+  "name": "smolblog/smolblog-twitter",
+  "description": "Twitter functionality for Smolblog",
+  "type": "library",
+  "license": "AGPL-3.0-only",
   "repositories": [
     {
       "type": "path",
       "url": "../smolblog-core"
     }
   ],
-	"autoload": {
-		"psr-4": {
-			"Smolblog\\Twitter\\": "src/"
-		}
-	},
-	"authors": [
-		{
-			"name": "Smolblog",
-			"email": "dev@smolblog.org"
-		},
-		{
-			"name": "Evan Hildreth",
-			"email": "me@eph.me"
-		}
-	],
-	"require": {
-		"smolblog/oauth2-twitter": "^1.0",
-		"smolblog/smolblog-core": "dev-feature/authentication"
-	},
-	"require-dev": {
-		"squizlabs/php_codesniffer": "^3.0",
-		"phpunit/phpunit": "^9"
-	},
-	"scripts": {
-		"test": "phpunit --testdox tests",
-		"lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
-		"lintfix": "./vendor/squizlabs/php_codesniffer/bin/phpcbf"
-	}
+  "autoload": {
+    "psr-4": {
+      "Smolblog\\Twitter\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Smolblog",
+      "email": "dev@smolblog.org"
+    },
+    {
+      "name": "Evan Hildreth",
+      "email": "me@eph.me"
+    }
+  ],
+  "require": {
+    "smolblog/oauth2-twitter": "^1.0",
+    "smolblog/smolblog-core": "dev-main"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0",
+    "phpunit/phpunit": "^9"
+  },
+  "scripts": {
+    "test": "phpunit --testsuite core",
+    "lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "lintfix": "./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+  }
 }
