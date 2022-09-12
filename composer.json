@@ -5,8 +5,8 @@
   "license": "AGPL-3.0-only",
   "repositories": [
     {
-      "type": "path",
-      "url": "../smolblog-core"
+      "type": "vcs",
+      "url": "https://github.com/smolblog/smolblog-core"
     }
   ],
   "autoload": {
