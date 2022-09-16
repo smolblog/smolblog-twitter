@@ -12,16 +12,21 @@
   "autoload": {
     "psr-4": {
       "Smolblog\\Twitter\\": "src/"
-    }
+    },
+    "files": [
+      "index.php"
+    ]
   },
   "authors": [
     {
       "name": "Smolblog",
-      "email": "dev@smolblog.org"
+      "email": "dev@smolblog.org",
+      "homepage": "https://www.smolblog.org/"
     },
     {
       "name": "Evan Hildreth",
-      "email": "me@eph.me"
+      "email": "me@eph.me",
+      "homepage": "https://www.oddevan.com/"
     }
   ],
   "require": {
@@ -36,5 +41,11 @@
     "test": "phpunit --testsuite core",
     "lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
     "lintfix": "./vendor/squizlabs/php_codesniffer/bin/phpcbf"
+  },
+  "extra": {
+    "smolblog": {
+      "title": "Twitter Connector",
+      "entrypoint": "\\Smolblog\\Twitter\\loadPlugin"
+    }
   }
 }
