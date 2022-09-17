@@ -12,10 +12,7 @@
   "autoload": {
     "psr-4": {
       "Smolblog\\Twitter\\": "src/"
-    },
-    "files": [
-      "index.php"
-    ]
+    }
   },
   "authors": [
     {
@@ -45,7 +42,7 @@
   "extra": {
     "smolblog": {
       "title": "Twitter Connector",
-      "entrypoint": "\\Smolblog\\Twitter\\loadPlugin"
+      "pluginClass": "\\Smolblog\\Twitter\\Plugin"
     }
   }
 }
