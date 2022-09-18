@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47aa84deb0c88f87073b202c57a78b44",
+    "content-hash": "ebd0c5560bde5a3690143e3ee7ba0551",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -1175,12 +1175,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smolblog/smolblog-core.git",
-                "reference": "86ad984041badcdbc1fe860c4a5380c34e66a92f"
+                "reference": "333ed9b353ac84cf3781dffde5d84a0c433021a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smolblog/smolblog-core/zipball/86ad984041badcdbc1fe860c4a5380c34e66a92f",
-                "reference": "86ad984041badcdbc1fe860c4a5380c34e66a92f",
+                "url": "https://api.github.com/repos/smolblog/smolblog-core/zipball/333ed9b353ac84cf3781dffde5d84a0c433021a9",
+                "reference": "333ed9b353ac84cf3781dffde5d84a0c433021a9",
                 "shasum": ""
             },
             "require": {
@@ -1228,7 +1228,7 @@
                 "source": "https://github.com/smolblog/smolblog-core/tree/feature/plugin-interface",
                 "issues": "https://github.com/smolblog/smolblog-core/issues"
             },
-            "time": "2022-09-16T00:18:45+00:00"
+            "time": "2022-09-17T03:01:22+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
