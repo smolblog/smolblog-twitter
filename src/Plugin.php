@@ -3,10 +3,8 @@
 namespace Smolblog\Twitter;
 
 use Smolblog\Core\App;
-use Smolblog\Core\Plugin as SmolblogPlugin;
+use Smolblog\Core\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
 use Smolblog\Core\Events\CollectingConnectors;
-use Smolblog\Core\Factories\ConnectionCredentialFactory;
-use Smolblog\Core\Registrars\ConnectorRegistrar;
 use Smolblog\OAuth2\Client\Provider\Twitter;
 
 /**
@@ -14,20 +12,38 @@ use Smolblog\OAuth2\Client\Provider\Twitter;
  */
 class Plugin implements SmolblogPlugin {
 	/**
-	 * Create the Plugin object by loading its classes in the container and subscribing to events.
+	 * Get the information about this Plugin
 	 *
-	 * @param App $smolblog Current Smolblog instance.
+	 * @return PluginPackage
 	 */
-	public function __construct(App $smolblog) {
-		$smolblog->container->addShared(Twitter::class, fn() => new Twitter([
+	public static function config(): PluginPackage {
+		return new PluginPackage(
+			package: 'smolblog/twitter',
+			version: 'dev-main',
+			title: 'Smolblog Twitter Connection',
+			description: 'Connection to the Twitter API for authentication and incoming and outgoing syndication.',
+			authors: [
+				['name' => 'Smolblog', 'website' => 'https://smolblog.org/'],
+				['name' => 'Evan Hildreth', 'website' => 'https://www.oddevan.com/']
+			],
+		);
+	}
+
+	/**
+	 * Plugin bootstrapping function called by the App
+	 *
+	 * @param App $app Smolblog App instance being intiialized.
+	 * @return void
+	 */
+	public static function setup(App $app) {
+		$app->container->addShared(Twitter::class, fn() => new Twitter([
 			'clientId' => 'mememe',
 			'clientSecret' => 'youyou'
 		]));
-		$smolblog->container->addShared(TwitterConnector::class)
+		$app->container->addShared(TwitterConnector::class)
 			->addArgument(Twitter::class)
-			->addArgument(ConnectionCredentialFactory::class);
 
-		$smolblog->events->subscribeTo(CollectingConnectors::class, [$this, 'registerConnector']);
+		$app->events->subscribeTo(CollectingConnectors::class, self::class . '::registerConnector');
 	}
 
 	/**
@@ -36,7 +52,7 @@ class Plugin implements SmolblogPlugin {
 	 * @param CollectingConnectors $event Event collecting Connector classes.
 	 * @return void
 	 */
-	public function registerConnector(CollectingConnectors $event): void {
+	public static function registerConnector(CollectingConnectors $event): void {
 		$event->connectors[] = TwitterConnector::class;
 	}
 }

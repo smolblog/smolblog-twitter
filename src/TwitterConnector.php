@@ -2,34 +2,32 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\{Connector, ConnectorInitData};
-use Smolblog\Core\Factories\ConnectionCredentialFactory;
-use Smolblog\Core\Models\ConnectionCredential;
+use Smolblog\Core\Connector\{AuthRequestState, Connection, Connector, ConnectorConfig, ConnectorInitData};
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
 
 /**
  * Handle authenticating against the Twitter API
  */
 class TwitterConnector implements Connector {
+	public const SLUG = 'twitter';
+
 	/**
 	 * Create the connector instance
 	 *
-	 * @param TwitterOAuth                $provider Instance of the OAuth library to use.
-	 * @param ConnectionCredentialFactory $factory  Factory for creating the ConnectionCredential.
+	 * @param TwitterOAuth $provider Instance of the OAuth library to use.
 	 */
 	public function __construct(
 		private TwitterOAuth $provider,
-		private ConnectionCredentialFactory $factory
 	) {
 	}
 
 	/**
-	 * Identifier for the provider.
+	 * Configuration for the provider.
 	 *
-	 * @return string
+	 * @return ConnectorConfig
 	 */
-	public function slug(): string {
-		return 'twitter';
+	public static function config(): ConnectorConfig {
+		return new ConnectorConfig(slug: self::SLUG);
 	}
 
 	/**
@@ -56,26 +54,23 @@ class TwitterConnector implements Connector {
 	/**
 	 * Handle the OAuth callback from the provider and create the credential
 	 *
-	 * @param string $code Code given to the OAuth callback.
-	 * @param array  $info Info from the original request.
-	 * @return null|ConnectionCredential Created credential, null on failure
+	 * @param string           $code Code given to the OAuth callback.
+	 * @param AuthRequestState $info Info from the original request.
+	 * @return null|Connection Created credential, null on failure
 	 */
-	public function createCredential(string $code, array $info = []): ?ConnectionCredential {
+	public function createConnection(string $code, AuthRequestState $info): ?Connection {
 		$token = $this->provider->getAccessToken('authorization_code', [
 			'code' => $code,
-			'code_verifier' => $info['verifier'],
+			'code_verifier' => $info->info['verifier'],
 		]);
 		$twitterUser = $this->provider->getResourceOwner($token);
 
-		$credential = $this->factory->credentialWith(
-			provider: $this->slug(),
-			key: $twitterUser->getId(),
+		return new Connection(
+			userId: $info->userId,
+			provider: self::SLUG,
+			providerKey: $twitterUser->getId(),
+			displayName: $twitterUser->getUsername(),
+			details: ['token' => $token],
 		);
-		$credential->user_id = $info['user_id'];
-		$credential->display_name = $twitterUser->getUsername();
-		$credential->details = $token;
-		$credential->save();
-
-		return $credential;
 	}
 }
