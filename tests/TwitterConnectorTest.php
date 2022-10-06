@@ -4,8 +4,7 @@ namespace Smolblog\Twitter;
 
 use League\OAuth2\Client\Token\AccessToken;
 use PHPUnit\Framework\TestCase;
-use Smolblog\Core\Factories\ConnectionCredentialFactory;
-use Smolblog\Core\Models\ConnectionCredential;
+use Smolblog\Core\Connector\{Connection, AuthRequestState};
 use Smolblog\OAuth2\Client\Provider\{Twitter, TwitterUser};
 
 final class TwitterConnectorTest extends TestCase {
@@ -16,7 +15,7 @@ final class TwitterConnectorTest extends TestCase {
 		$state = uniqid();
 		$pkce = uniqid();
 		$userName = uniqid();
-		$this->userId = uniqid();
+		$this->userId = 5;
 
 		$user = $this->createStub(TwitterUser::class);
 		$user->method('getId')->willReturn($this->userId);
@@ -30,15 +29,10 @@ final class TwitterConnectorTest extends TestCase {
 		$this->provider->method('getPkceVerifier')->willReturn($pkce);
 		$this->provider->method('getAccessToken')->willReturn($this->createStub(AccessToken::class));
 		$this->provider->method('getResourceOwner')->willReturn($user);
-
-		$this->factory = $this->createStub(ConnectionCredentialFactory::class);
-		$this->factory->method('credentialWith')->willReturnCallback(function($provider, $key) {
-			return $this->createStub(ConnectionCredential::class);
-		});
 	}
 
 	public function testInitializationDataCanBeRetrieved() {
-		$connector = new TwitterConnector(provider: $this->provider, factory: $this->factory);
+		$connector = new TwitterConnector(provider: $this->provider);
 		$callbackUrl = 'https://smol.blog/api/twitter';
 
 		$info = $connector->getInitializationData($callbackUrl);
@@ -48,12 +42,16 @@ final class TwitterConnectorTest extends TestCase {
 	}
 
 	public function testCredentialCanBeCreated() {
-		$connector = new TwitterConnector(provider: $this->provider, factory: $this->factory);
+		$connector = new TwitterConnector(provider: $this->provider);
 
-		$cred = $connector->createCredential(code: uniqid(), info: [
-			'verifier' => $this->provider->getPkceVerifier(),
-			'user_id' => $this->userId,
-		]);
-		$this->assertInstanceOf(ConnectionCredential::class, $cred);
+		$cred = $connector->createConnection(
+			code: uniqid(),
+			info: new AuthRequestState(
+				id: uniqid(),
+				userId: $this->userId,
+				info: ['verifier' => $this->provider->getPkceVerifier()]
+			)
+		);
+		$this->assertInstanceOf(Connection::class, $cred);
 	}
 }
