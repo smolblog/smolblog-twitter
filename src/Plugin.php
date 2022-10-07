@@ -37,11 +37,11 @@ class Plugin implements SmolblogPlugin {
 	 */
 	public static function setup(App $app) {
 		$app->container->addShared(Twitter::class, fn() => new Twitter([
-			'clientId' => 'mememe',
-			'clientSecret' => 'youyou'
+			'clientId' => $app->env->twitterAppId ?? '',
+			'clientSecret' => $app->env->twitterAppSecret ?? '',
 		]));
 		$app->container->addShared(TwitterConnector::class)
-			->addArgument(Twitter::class)
+			->addArgument(Twitter::class);
 
 		$app->events->subscribeTo(CollectingConnectors::class, self::class . '::registerConnector');
 	}
