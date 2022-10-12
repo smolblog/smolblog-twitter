@@ -37,7 +37,8 @@ class TwitterConnector implements Connector {
 	 * @return ConnectorInitData
 	 */
 	public function getInitializationData(string $callbackUrl): ConnectorInitData {
-		$authUrl = $this->provider->getAuthorizationUrl(['redirect_uri' => $callbackUrl]);
+		// Callback URL is given in the provider constructor; will need to refactor that.
+		$authUrl = $this->provider->getAuthorizationUrl();
 		$state = $this->provider->getState();
 
 		// We also need to store the PKCE Verification code so we can send it with

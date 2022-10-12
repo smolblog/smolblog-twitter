@@ -39,6 +39,7 @@ class Plugin implements SmolblogPlugin {
 		$app->container->addShared(Twitter::class, fn() => new Twitter([
 			'clientId' => $app->env->twitterAppId ?? '',
 			'clientSecret' => $app->env->twitterAppSecret ?? '',
+			'redirectUri' => "{$app->env->apiBase}connect/callback/twitter",
 		]));
 		$app->container->addShared(TwitterConnector::class)
 			->addArgument(Twitter::class);
