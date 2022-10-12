@@ -36,7 +36,7 @@ class TwitterConnector implements Connector {
 	 * @param string $callbackUrl URL to pass to Twitter to redirect back to.
 	 * @return ConnectorInitData
 	 */
-	public function getInitializationData(string $callbackUrl): ConnectorInitData {
+	public function getInitializationData(string $callbackUrl = null): ConnectorInitData {
 		// Callback URL is given in the provider constructor; will need to refactor that.
 		$authUrl = $this->provider->getAuthorizationUrl();
 		$state = $this->provider->getState();

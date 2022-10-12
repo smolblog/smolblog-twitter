@@ -9,8 +9,8 @@ use Smolblog\OAuth2\Client\Provider\{Twitter, TwitterUser};
 
 final class TwitterConnectorTest extends TestCase {
 	private $provider;
-	private $factory;
 	private $userId;
+	private $authUrl = 'https://twitter.com/api/v2/oauth2/authorize';
 	public function setUp(): void {
 		$state = uniqid();
 		$pkce = uniqid();
@@ -22,9 +22,7 @@ final class TwitterConnectorTest extends TestCase {
 		$user->method('getUsername')->willReturn($userName);
 
 		$this->provider = $this->createStub(Twitter::class);
-		$this->provider->method('getAuthorizationUrl')->willReturnCallback(function($args) {
-			return $args['redirect_uri'];
-		});
+		$this->provider->method('getAuthorizationUrl')->willReturn($this->authUrl);
 		$this->provider->method('getState')->willReturn($state);
 		$this->provider->method('getPkceVerifier')->willReturn($pkce);
 		$this->provider->method('getAccessToken')->willReturn($this->createStub(AccessToken::class));
@@ -33,10 +31,9 @@ final class TwitterConnectorTest extends TestCase {
 
 	public function testInitializationDataCanBeRetrieved() {
 		$connector = new TwitterConnector(provider: $this->provider);
-		$callbackUrl = 'https://smol.blog/api/twitter';
 
-		$info = $connector->getInitializationData($callbackUrl);
-		$this->assertEquals($callbackUrl, $info->url);
+		$info = $connector->getInitializationData();
+		$this->assertEquals($this->authUrl, $info->url);
 		$this->assertEquals($this->provider->getState(), $info->state);
 		$this->assertEquals($this->provider->getPkceVerifier(), $info->info['verifier']);
 	}
