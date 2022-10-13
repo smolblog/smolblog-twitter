@@ -71,7 +71,10 @@ class TwitterConnector implements Connector {
 			provider: self::SLUG,
 			providerKey: $twitterUser->getId(),
 			displayName: $twitterUser->getUsername(),
-			details: ['token' => $token],
+			details: [
+				'accessToken' => $token->getToken(),
+				'refreshToken' => $token->getRefreshToken(),
+			],
 		);
 	}
 }
