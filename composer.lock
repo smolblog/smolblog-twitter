@@ -1285,12 +1285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/smolblog/smolblog-core.git",
-                "reference": "451923f3cb5ec838f37d6ef3dbc3a3dcbdf7fefa"
+                "reference": "97731cb6a4006bfb458c92a653297cc9acb440b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/smolblog/smolblog-core/zipball/451923f3cb5ec838f37d6ef3dbc3a3dcbdf7fefa",
-                "reference": "451923f3cb5ec838f37d6ef3dbc3a3dcbdf7fefa",
+                "url": "https://api.github.com/repos/smolblog/smolblog-core/zipball/97731cb6a4006bfb458c92a653297cc9acb440b3",
+                "reference": "97731cb6a4006bfb458c92a653297cc9acb440b3",
                 "shasum": ""
             },
             "require": {
@@ -1345,7 +1345,7 @@
                 "source": "https://github.com/smolblog/smolblog-core/tree/main",
                 "issues": "https://github.com/smolblog/smolblog-core/issues"
             },
-            "time": "2022-10-04T13:30:03+00:00"
+            "time": "2022-10-15T02:48:11+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",

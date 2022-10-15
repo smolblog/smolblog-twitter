@@ -4,7 +4,7 @@ namespace Smolblog\Twitter;
 
 use League\OAuth2\Client\Token\AccessToken;
 use PHPUnit\Framework\TestCase;
-use Smolblog\Core\Connector\{Connection, AuthRequestState};
+use Smolblog\Core\Connector\{Connection, AuthRequestState, Channel};
 use Smolblog\OAuth2\Client\Provider\{Twitter, TwitterUser};
 
 final class TwitterConnectorTest extends TestCase {
@@ -50,5 +50,21 @@ final class TwitterConnectorTest extends TestCase {
 			)
 		);
 		$this->assertInstanceOf(Connection::class, $cred);
+	}
+
+	public function testSingleChannelIsGiven() {
+		$connector = new TwitterConnector(provider: $this->provider);
+
+		$channels = $connector->getChannels(connection: new Connection(
+			userId: 5,
+			provider: 'twitter',
+			providerKey: '12345',
+			displayName: '@smolbirb',
+			details: [],
+		));
+
+		$this->assertIsArray($channels);
+		$this->assertEquals(1, count($channels));
+		$this->assertInstanceOf(Channel::class, $channels[0]);
 	}
 }

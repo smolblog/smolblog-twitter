@@ -2,7 +2,7 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\Connector\{AuthRequestState, Connection, Connector, ConnectorConfig, ConnectorInitData};
+use Smolblog\Core\Connector\{AuthRequestState, Channel, Connection, Connector, ConnectorConfig, ConnectorInitData};
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
 
 /**
@@ -76,5 +76,23 @@ class TwitterConnector implements Connector {
 				'refreshToken' => $token->getRefreshToken(),
 			],
 		);
+	}
+
+	/**
+	 * Get the channels enabled by the Connection.
+	 *
+	 * @param Connection $connection Account to get Channels for.
+	 * @return Channel[] Array of Channels this Connection can use
+	 */
+	public function getChannels(Connection $connection): array {
+		// Currently, Twitter accounts only have one Channel.
+		return [
+			new Channel(
+				connectionId: $connection->id,
+				channelKey: $connection->providerKey,
+				displayName: $connection->displayName,
+				details: [],
+			)
+		];
 	}
 }
