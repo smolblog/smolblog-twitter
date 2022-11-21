@@ -4,7 +4,7 @@ namespace Smolblog\Twitter;
 
 use Smolblog\Core\App;
 use Smolblog\Core\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
-use Smolblog\Core\Events\CollectingConnectors;
+use Smolblog\Core\Events\{CollectingConnectors, CollectingImporters};
 use Smolblog\OAuth2\Client\Provider\Twitter;
 
 /**
@@ -44,7 +44,14 @@ class Plugin implements SmolblogPlugin {
 		$app->container->addShared(TwitterConnector::class)
 			->addArgument(Twitter::class);
 
-		$app->events->subscribeTo(CollectingConnectors::class, self::class . '::registerConnector');
+		$app->events->subscribeTo(
+			CollectingConnectors::class,
+			fn($event) => $event->connectors['twitter'] = TwitterConnector::class
+		);
+		$app->events->subscribeTo(
+			CollectingImporters::class,
+			fn($event) => $event->connectors['twitter'] = TwitterImporter::class
+		)
 	}
 
 	/**
@@ -54,6 +61,6 @@ class Plugin implements SmolblogPlugin {
 	 * @return void
 	 */
 	public static function registerConnector(CollectingConnectors $event): void {
-		$event->connectors[] = TwitterConnector::class;
+		$event->connectors['twitter'] = TwitterConnector::class;
 	}
 }

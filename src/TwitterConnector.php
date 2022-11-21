@@ -2,13 +2,14 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\Connector\{AuthRequestState, Channel, Connection, Connector, ConnectorConfig, ConnectorInitData};
+use Smolblog\Core\Connector\{Connector, ConnectorWithRefresh, ConnectorInitData};
+use Smolblog\Core\Connector\Entities\{AuthRequestState, Channel, Connection};
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
 
 /**
  * Handle authenticating against the Twitter API
  */
-class TwitterConnector implements Connector {
+class TwitterConnector implements ConnectorWithRefresh {
 	public const SLUG = 'twitter';
 
 	/**
@@ -19,15 +20,6 @@ class TwitterConnector implements Connector {
 	public function __construct(
 		private TwitterOAuth $provider,
 	) {
-	}
-
-	/**
-	 * Configuration for the provider.
-	 *
-	 * @return ConnectorConfig
-	 */
-	public static function config(): ConnectorConfig {
-		return new ConnectorConfig(slug: self::SLUG);
 	}
 
 	/**
@@ -94,5 +86,13 @@ class TwitterConnector implements Connector {
 				details: [],
 			)
 		];
+	}
+
+	public function connectionNeedsRefresh(Connection $connection): bool {
+		return false;
+	}
+
+	public function refreshConnection(Connection $connection): Connection {
+		return $connection;
 	}
 }

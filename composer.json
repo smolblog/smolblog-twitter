@@ -28,7 +28,8 @@
   ],
   "require": {
     "smolblog/oauth2-twitter": "^1.0",
-    "smolblog/smolblog-core": "dev-main"
+    "smolblog/smolblog-core": "dev-main",
+    "coderjerk/bird-elephant": "^0.5.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0",

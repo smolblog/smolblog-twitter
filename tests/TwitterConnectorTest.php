@@ -4,7 +4,7 @@ namespace Smolblog\Twitter;
 
 use League\OAuth2\Client\Token\AccessToken;
 use PHPUnit\Framework\TestCase;
-use Smolblog\Core\Connector\{Connection, AuthRequestState, Channel};
+use Smolblog\Core\Connector\Entities\{Connection, AuthRequestState, Channel};
 use Smolblog\OAuth2\Client\Provider\{Twitter, TwitterUser};
 
 final class TwitterConnectorTest extends TestCase {
@@ -44,7 +44,7 @@ final class TwitterConnectorTest extends TestCase {
 		$cred = $connector->createConnection(
 			code: uniqid(),
 			info: new AuthRequestState(
-				id: uniqid(),
+				key: uniqid(),
 				userId: $this->userId,
 				info: ['verifier' => $this->provider->getPkceVerifier()]
 			)
