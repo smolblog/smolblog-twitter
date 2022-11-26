@@ -37,6 +37,7 @@
   },
   "scripts": {
     "test": "phpunit --testsuite core",
+    "livetest": "phpunit --testsuite live",
     "lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
     "lintfix": "./vendor/squizlabs/php_codesniffer/bin/phpcbf"
   },

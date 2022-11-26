@@ -2,22 +2,12 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\Importer\{Importer, ImporterConfig, RemoveAlreadyImported};
+use Smolblog\Core\Importer\{Importer, RemoveAlreadyImported};
 
 /**
  * Importer class for Twitter
  */
 class TwitterImporter implements Importer {
-	/**
-	 * Get the configuration for the importer. This will let the Registrar
-	 * get the information it needs without having to instantiate.
-	 *
-	 * @return ImporterConfig
-	 */
-	public static function config(): ImporterConfig {
-		return new ImporterConfig(slug: 'twitter');
-	}
-
 	/**
 	 * Construct the importer
 	 *

@@ -2,9 +2,10 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\App;
-use Smolblog\Core\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
-use Smolblog\Core\Events\{CollectingConnectors, CollectingImporters};
+use Smolblog\App\Smolblog;
+use Smolblog\App\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
+use Smolblog\App\Hooks\{CollectingConnectors, CollectingImporters};
+use Smolblog\Core\Importer\RemoveAlreadyImported;
 use Smolblog\OAuth2\Client\Provider\Twitter;
 
 /**
@@ -32,10 +33,10 @@ class Plugin implements SmolblogPlugin {
 	/**
 	 * Plugin bootstrapping function called by the App
 	 *
-	 * @param App $app Smolblog App instance being intiialized.
+	 * @param Smolblog $app Smolblog App instance being intiialized.
 	 * @return void
 	 */
-	public static function setup(App $app) {
+	public static function setup(Smolblog $app) {
 		$app->container->addShared(Twitter::class, fn() => new Twitter([
 			'clientId' => $app->env->twitterAppId ?? '',
 			'clientSecret' => $app->env->twitterAppSecret ?? '',
@@ -43,6 +44,9 @@ class Plugin implements SmolblogPlugin {
 		]));
 		$app->container->addShared(TwitterConnector::class)
 			->addArgument(Twitter::class);
+		$app->container->addShared(TwitterImporter::class)
+			->addArgument(RemoveAlreadyImported::class)
+			->addArgument(BirdElephantFactory::class);
 
 		$app->events->subscribeTo(
 			CollectingConnectors::class,
@@ -52,15 +56,5 @@ class Plugin implements SmolblogPlugin {
 			CollectingImporters::class,
 			fn($event) => $event->connectors['twitter'] = TwitterImporter::class
 		)
-	}
-
-	/**
-	 * Provide the class for the connector so it can be registered.
-	 *
-	 * @param CollectingConnectors $event Event collecting Connector classes.
-	 * @return void
-	 */
-	public static function registerConnector(CollectingConnectors $event): void {
-		$event->connectors['twitter'] = TwitterConnector::class;
 	}
 }

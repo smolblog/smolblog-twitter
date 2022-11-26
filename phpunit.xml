@@ -7,5 +7,8 @@
 		<testsuite name="core">
 			<directory>tests</directory>
 		</testsuite>
+		<testsuite name="live">
+			<directory>livetests</directory>
+		</testsuite>
 	</testsuites>
 </phpunit>

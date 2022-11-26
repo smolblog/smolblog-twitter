@@ -5,6 +5,7 @@
 	<file>./src</file>
 
 	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/livetests/*</exclude-pattern>
 
 	<arg name="extensions" value="php"/>
 	<arg name="tab-width" value="2"/>

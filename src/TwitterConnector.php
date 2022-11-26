@@ -5,6 +5,8 @@ namespace Smolblog\Twitter;
 use Smolblog\Core\Connector\{Connector, ConnectorWithRefresh, ConnectorInitData};
 use Smolblog\Core\Connector\Entities\{AuthRequestState, Channel, Connection};
 use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
+use League\OAuth2\Client\Token\AccessToken;
+use League\OAuth2\Client\Provider\Exception\IdentityProviderException;
 
 /**
  * Handle authenticating against the Twitter API
@@ -89,10 +91,31 @@ class TwitterConnector implements ConnectorWithRefresh {
 	}
 
 	public function connectionNeedsRefresh(Connection $connection): bool {
-		return false;
+		try {
+			$this->provider->getResourceOwner(new AccessToken([
+				'access_token' => $connection->details['accessToken'],
+				'refresh_token' => $connection->details['refreshToken'],
+			]));
+			return false;
+		} catch (IdentityProviderException $e) {
+			return true;
+		}
+		return true;
 	}
 
 	public function refreshConnection(Connection $connection): Connection {
-		return $connection;
+		$newToken = $this->provider->getAccessToken('refresh_token', [
+			'refresh_token' => $connection->details['refreshToken']
+		]);
+		return new Connection(
+			userId: $connection->userId,
+			provider: 'twitter',
+			providerKey: $connection->providerKey,
+			displayName: $connection->displayName,
+			details: [
+				'accessToken' => $newToken->getToken(),
+				'refreshToken' => $newToken->getRefreshToken(),
+			],
+		);
 	}
 }
