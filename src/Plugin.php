@@ -2,10 +2,11 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\App;
-use Smolblog\Core\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
-use Smolblog\Core\Events\CollectingConnectors;
-use Smolblog\OAuth2\Client\Provider\Twitter;
+use Smolblog\App\Smolblog;
+use Smolblog\App\Environment;
+use Smolblog\App\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
+use Smolblog\App\Hooks\CollectingConnectors;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 /**
  * Plugin class for this library
@@ -36,24 +37,12 @@ class Plugin implements SmolblogPlugin {
 	 * @return void
 	 */
 	public static function setup(App $app) {
-		$app->container->addShared(Twitter::class, fn() => new Twitter([
-			'clientId' => $app->env->twitterAppId ?? '',
-			'clientSecret' => $app->env->twitterAppSecret ?? '',
-			'redirectUri' => "{$app->env->apiBase}connect/callback/twitter",
-		]));
 		$app->container->addShared(TwitterConnector::class)
-			->addArgument(Twitter::class);
+			->addArgument(Environment::class);
 
-		$app->events->subscribeTo(CollectingConnectors::class, self::class . '::registerConnector');
-	}
-
-	/**
-	 * Provide the class for the connector so it can be registered.
-	 *
-	 * @param CollectingConnectors $event Event collecting Connector classes.
-	 * @return void
-	 */
-	public static function registerConnector(CollectingConnectors $event): void {
-		$event->connectors[] = TwitterConnector::class;
+		$app->events->subscribeTo(
+			CollectingConnectors::class,
+			fn($event) => $event->connectors['twitter'] = TwitterConnector::class
+		);
 	}
 }

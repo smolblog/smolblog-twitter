@@ -2,8 +2,9 @@
 
 namespace Smolblog\Twitter;
 
+use Smolblog\App\Environment;
 use Smolblog\Core\Connector\{AuthRequestState, Channel, Connection, Connector, ConnectorConfig, ConnectorInitData};
-use Smolblog\OAuth2\Client\Provider\Twitter as TwitterOAuth;
+use Abraham\TwitterOAuth\TwitterOAuth;
 
 /**
  * Handle authenticating against the Twitter API
@@ -12,22 +13,17 @@ class TwitterConnector implements Connector {
 	public const SLUG = 'twitter';
 
 	/**
-	 * Create the connector instance
+	 * Construct the connector
 	 *
-	 * @param TwitterOAuth $provider Instance of the OAuth library to use.
+	 * @throws TwitterException When $env does not have twitterAppId and twitterAppSecret.
+	 * @param Environment $env App Environment with Twitter application keys.
 	 */
 	public function __construct(
-		private TwitterOAuth $provider,
+		private Environment $env
 	) {
-	}
-
-	/**
-	 * Configuration for the provider.
-	 *
-	 * @return ConnectorConfig
-	 */
-	public static function config(): ConnectorConfig {
-		return new ConnectorConfig(slug: self::SLUG);
+		if (!isset($env->twitterAppId) || !isset($env->twitterAppSecret)) {
+			throw new TwitterException('Environment does not have Twitter application keys.');
+		}
 	}
 
 	/**
@@ -37,18 +33,21 @@ class TwitterConnector implements Connector {
 	 * @return ConnectorInitData
 	 */
 	public function getInitializationData(string $callbackUrl = null): ConnectorInitData {
-		// Callback URL is given in the provider constructor; will need to refactor that.
-		$authUrl = $this->provider->getAuthorizationUrl();
-		$state = $this->provider->getState();
+		$provider = new TwitterOAuth(
+			$this->env->twitterAppId ?? '',
+			$this->env->twitterAppSecret ?? ''
+		);
 
-		// We also need to store the PKCE Verification code so we can send it with
-		// the authorization code request.
-		$verifier = $this->provider->getPkceVerifier();
+		$requestToken = $provider->oauth('oauth/request_token', ['oauth_callback' => $callbackUrl]);
+		$url = $provider->url('oauth/authorize', ['oauth_token' => $requestToken['oauth_token']]);
 
 		return new ConnectorInitData(
-			url: $authUrl,
-			state: $state,
-			info: [ 'verifier' => $verifier ],
+			url: $url,
+			state: $requestToken['oauth_token'],
+			info: [
+				'oauth_token'        => $request_token['oauth_token'],
+				'oauth_token_secret' => $request_token['oauth_token_secret'],
+			],
 		);
 	}
 
@@ -60,20 +59,24 @@ class TwitterConnector implements Connector {
 	 * @return null|Connection Created credential, null on failure
 	 */
 	public function createConnection(string $code, AuthRequestState $info): ?Connection {
-		$token = $this->provider->getAccessToken('authorization_code', [
-			'code' => $code,
-			'code_verifier' => $info->info['verifier'],
-		]);
-		$twitterUser = $this->provider->getResourceOwner($token);
+		$provider = = new TwitterOAuth(
+			$this->env->twitterAppId ?? '',
+			$this->env->twitterAppSecret ?? '',
+			$info->info['oauth_token'],
+			$info->info['oauth_token_secret']
+		);
+		$access_info = $provider->oauth('oauth/access_token', [ 'oauth_verifier' => $code ]);
+		print_r($access_info);
+		die;
 
 		return new Connection(
 			userId: $info->userId,
 			provider: self::SLUG,
 			providerKey: $twitterUser->getId(),
-			displayName: $twitterUser->getUsername(),
+			displayName: $access_info['screen_name'],
 			details: [
-				'accessToken' => $token->getToken(),
-				'refreshToken' => $token->getRefreshToken(),
+				'oauth_token' => $access_info['oauth_token'],
+				'oauth_token_secret' => $access_info['oauth_token_secret'],
 			],
 		);
 	}
