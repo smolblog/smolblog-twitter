@@ -5,6 +5,7 @@ namespace Smolblog\Twitter;
 use PHPUnit\Framework\TestCase;
 use Smolblog\OAuth2\Client\Provider\Twitter;
 use Smolblog\Core\Connector\Entities\Connection;
+use League\OAuth2\Client\Token\AccessToken;
 
 require_once 'cred.php';
 
@@ -32,8 +33,8 @@ class RefreshTest extends TestCase {
 		}
 
 		$this->assertInstanceOf(
-			Smolblog\OAuth2\Client\Provider\TwitterUser::class,
-			$this->provider->getResourceOwner(new AccessToken($this->connection->details))
+			\Smolblog\OAuth2\Client\Provider\TwitterUser::class,
+			$this->provider->getResourceOwner(new AccessToken(['access_token' => $this->connection->details['accessToken']])),
 		);
 	}
 }

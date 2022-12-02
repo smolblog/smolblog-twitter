@@ -29,7 +29,9 @@
   "require": {
     "smolblog/oauth2-twitter": "^1.0",
     "smolblog/smolblog-core": "dev-main",
-    "coderjerk/bird-elephant": "^0.5.0"
+    "coderjerk/bird-elephant": "^0.5.0",
+    "nojimage/twitter-text-php": "^3.2",
+    "cebe/markdown": "^1.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0",
