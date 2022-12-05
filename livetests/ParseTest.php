@@ -3,6 +3,8 @@
 namespace Smolblog\Twitter;
 
 use DateTime;
+use DateTimeInterface;
+use function nl2br;
 use PHPUnit\Framework\TestCase;
 use Smolblog\Core\Connector\Entities\Connection;
 use Smolblog\Core\Post\Blocks\{EmbedBlock, LinkBlock, ParagraphBlock, ReblogBlock};
@@ -18,6 +20,7 @@ class ParseTest extends TestCase {
 
 	public function testParsingCorrectly() {
 		$birdsite = new BirdElephant(['bearer_token' => $this->connection->details['accessToken']]);
+		$markdown = new \cebe\markdown\Markdown();
 
 		$params = [
 			'tweet.fields' => 'attachments,author_id,conversation_id,created_at,edit_controls,entities,id,referenced_tweets,text,withheld',
@@ -51,37 +54,68 @@ class ParseTest extends TestCase {
 			];
 		}
 
-		$posts = array_map(function($tweet) use($tweetRef) {
+		$linker = \Twitter\Text\Autolink::create()
+			->setNoFollow(false)
+			->setUsernameIncludeSymbol(true);
+
+		$posts = array_map(function($tweet) use($tweetRef, $markdown, $linker) {
 			$post = [
 				'timestamp' => new DateTime($tweet->created_at),
-				'bodyText' => $tweet->text,
 				'id' => $tweet->id,
+				'blocks' => [],
 			];
-
-			if ($tweet->conversation_id !== $tweet->id) {
-				$post['append_to'] = $tweet->conversation_id;
-			}
 
 			$referencedTweets = array_filter(
 				$tweet->referenced_tweets ?? [],
 				fn($ref) => $ref->type !== 'replied_to'
 			);
 
-			if (!empty($referencedTweets)) {
+			$reblogUrl = '';
+			if ($tweet->conversation_id !== $tweet->id) {
+				$post['append_to'] = $tweet->conversation_id;
+			} elseif (!empty($referencedTweets)) {
+				$twid = $referencedTweets[0]->id;
+				$twRef = $tweetRef[$twid];
+
+				$reblogUrl = $this->makeUrl(authorHandle: $twRef['author']['username'], tweetId: $twid);
+				$post['blocks'] = [
+					$this->getReblogBlock(
+						tweetId: $twid,
+						authorName: $twRef['author']['name'],
+						authorHandle: $twRef['author']['username'],
+						timestamp: $twRef['timestamp'],
+						text: $twRef['text']
+					)
+				];
+
 				if ($referencedTweets[0]->type === 'retweeted') {
-					// If this is a retweet without comment, clear out the body.
-					$post['bodyText'] = "Embed: {$referencedTweets[0]->id}";
+					// If this is a retweet without comment, we're done.
+					return $post;
+				}
+			}
+
+			$text = $linker->autoLinkUsernamesAndLists($linker->autoLinkHashtags($linker->autoLinkCashtags($tweet->text)));
+			foreach ($tweet->entities->urls ?? [] as $tacolink) {
+				$replacement = '';
+				if (str_starts_with($tacolink->display_url, 'twitter.com')) {
+					if ($reblogUrl !== $tacolink->expanded_url) {
+						$replacement = "\n\n{$tacolink->expanded_url}\n\n";
+					}
+				} else {
+					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\"".
+						"target=\"_blank\">{$tacolink->display_url}</a>";
+				}
+				$text = str_replace($tacolink->url, $replacement, $text);
+			}
+
+			$blockTexts = array_map(fn($p) => nl2br($markdown->parseParagraph($p)), explode("\n\n", $text));
+			foreach ($blockTexts as $blockText) {
+				if (str_starts_with($blockText, 'https://twitter.com/')) {
+					$post['blocks'][] = new EmbedBlock(url: $blockText);
+					continue;
 				}
 
-				if (!isset($post['append_to'])) {
-					// If this is in a thread, it's not a "reblog."
-					$post['reblog'] = true; //$tweetRef[$referencedTweets[0]->id];
-				}
-
-				$post['referenced'] = array_map(
-					fn($ref) => $tweetRef[$ref->id] ?? 'XXX',
-					$referencedTweets
-				);
+				$post['blocks'][] = new ParagraphBlock(content: $blockText);
 			}
 
 			return $post;
@@ -90,6 +124,36 @@ class ParseTest extends TestCase {
 		print_r($posts);
 
 		$this->assertInstanceOf(BirdElephant::class, $birdsite);
+	}
+
+	private function makeUrl(
+		string $authorHandle,
+		string $tweetId
+	) {
+		return "https://twitter.com/$authorHandle/status/$tweetId";
+	}
+
+	private function getReblogBlock(
+		string $tweetId,
+		string $authorName,
+		string $authorHandle,
+		DateTimeInterface $timestamp,
+		string $text
+	) {
+		$url = $this->makeUrl($authorHandle, $tweetId);
+		$date = $timestamp->format('F j, Y');
+
+		return new ReblogBlock(
+			url: $url,
+			link: new LinkBlock(
+				url: $url,
+				title: "$authorName on Twitter",
+				pullQuote: $text,
+				pullQuoteCaption:
+					"<a href='https://twitter.com/$authorHandle' rel='external' target='_blank'>".
+					"$authorName</a> on <a href='$url' rel='external' target='_blank'>$date</a>",
+			),
+		);
 	}
 
 	public function testTwitterTextAndMarkdown() {
@@ -103,7 +167,7 @@ class ParseTest extends TestCase {
 		$tacolink = json_decode('{"start":20,"end":43,"url":"https:\/\/t.co\/BkfHaDtKvc","expanded_url":"https:\/\/twitter.com\/NinEverything\/status\/1589723865617309696","display_url":"twitter.com\/NinEverything\/\u2026"}');
 		$html = str_replace(
 			$tacolink->url,
-			"<a href=\"{$tacolink->expanded_url}\"·class=\"tweet-url\"·rel=\"external\"·target=\"_blank\">{$tacolink->display_url}</a>",
+			"<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">{$tacolink->display_url}</a>",
 			$html
 		);
 
