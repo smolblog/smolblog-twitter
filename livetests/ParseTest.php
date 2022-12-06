@@ -102,7 +102,7 @@ class ParseTest extends TestCase {
 						$replacement = "\n\n{$tacolink->expanded_url}\n\n";
 					}
 				} else {
-					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\"".
+					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" ".
 						"target=\"_blank\">{$tacolink->display_url}</a>";
 				}
 				$text = str_replace($tacolink->url, $replacement, $text);

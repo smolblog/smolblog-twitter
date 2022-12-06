@@ -2,7 +2,8 @@
 
 namespace Smolblog\Twitter;
 
-use Smolblog\Core\Importer\{Importer, RemoveAlreadyImported};
+use Smolblog\Core\Connector\Entities\{Connection, Channel};
+use Smolblog\Core\Importer\{Importer, ImportResults, RemoveAlreadyImported};
 
 /**
  * Importer class for Twitter
