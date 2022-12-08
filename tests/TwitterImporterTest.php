@@ -6,6 +6,8 @@ use Coderjerk\BirdElephant\{BirdElephant, User};
 use PHPUnit\Framework\TestCase;
 use Smolblog\Core\Connector\Entities\{Connection, Channel};
 use Smolblog\Core\Importer\{ImportResults, RemoveAlreadyImported};
+use cebe\markdown\Markdown;
+use Twitter\Text\Autolink;
 
 final class TwitterImporterTest extends TestCase {
 	public function testPostsAreRetrieved() {
@@ -26,6 +28,8 @@ final class TwitterImporterTest extends TestCase {
 		$importer = new TwitterImporter(
 			filterService: $removeService,
 			factory: $birdFactory,
+			twitterLinker: Autolink::create()->setNoFollow(false)->setUsernameIncludeSymbol(true),
+			markdown: new Markdown(),
 		);
 
 		$connection = new Connection(
@@ -46,6 +50,8 @@ final class TwitterImporterTest extends TestCase {
 		);
 
 		$results = $importer->getPostsFromChannel(connection: $connection, channel: $channel, options: []);
+
+		print_r(array_slice($results->posts, 55, 5));
 
 		$this->assertInstanceOf(ImportResults::class, $results);
 	}

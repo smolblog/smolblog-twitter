@@ -2,11 +2,13 @@
 
 namespace Smolblog\Twitter;
 
+use cebe\markdown\Markdown;
 use Smolblog\App\Smolblog;
 use Smolblog\App\Plugin\{Plugin as SmolblogPlugin, PluginPackage};
 use Smolblog\App\Hooks\{CollectingConnectors, CollectingImporters};
 use Smolblog\Core\Importer\RemoveAlreadyImported;
 use Smolblog\OAuth2\Client\Provider\Twitter;
+use Twitter\Text\Autolink;
 
 /**
  * Plugin class for this library
@@ -42,11 +44,19 @@ class Plugin implements SmolblogPlugin {
 			'clientSecret' => $app->env->twitterAppSecret ?? '',
 			'redirectUri' => "{$app->env->apiBase}connect/callback/twitter",
 		]));
+		$app->container->addShared(
+			AutoLink::class,
+			fn() => Autolink::create()->setNoFollow(false)->setUsernameIncludeSymbol(true)
+		);
+		$app->container->addShared(Markdown::class);
+
 		$app->container->addShared(TwitterConnector::class)
 			->addArgument(Twitter::class);
 		$app->container->addShared(TwitterImporter::class)
 			->addArgument(RemoveAlreadyImported::class)
-			->addArgument(BirdElephantFactory::class);
+			->addArgument(BirdElephantFactory::class)
+			->addArgument(AutoLink::class)
+			->addArgument(Markdown::class);
 
 		$app->events->subscribeTo(
 			CollectingConnectors::class,
