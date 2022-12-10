@@ -50,8 +50,12 @@ final class TwitterImporterTest extends TestCase {
 		);
 
 		$results = $importer->getPostsFromChannel(connection: $connection, channel: $channel, options: []);
+		$json = json_encode($results->posts, JSON_PRETTY_PRINT);
 
-		print_r(array_slice($results->posts, 55, 5));
+		// echo "\n\n---\n$json\n---\n\n";
+		if (false === file_put_contents(__DIR__ . '/parsed_tweets.json', $json)) {
+			echo "File write failed!\n";
+		}
 
 		$this->assertInstanceOf(ImportResults::class, $results);
 	}

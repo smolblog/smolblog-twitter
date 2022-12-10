@@ -1,0 +1,2030 @@
+[
+    {
+        "id": "0184fdef-5536-7167-bb53-81404503a881",
+        "user_id": 1,
+        "timestamp": "2022-12-05T23:32:44.000+00:00",
+        "slug": "1599909667475431424",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5535-71ea-a60e-2b35030b4c85",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5535-71ea-a60e-2b3502997d86",
+                    "url": "https:\/\/twitter.com\/blankenship\/status\/1599893712380694530",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/blankenship\/status\/1599893712380694530",
+                "link": {
+                    "id": "0184fdef-5535-71ea-a60e-2b3501ea11a8",
+                    "url": "https:\/\/twitter.com\/blankenship\/status\/1599893712380694530",
+                    "title": "Joshua Blankenship on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Dear @netflix,\n\nI tweet you on behalf of my almost-8yo daughter, Henrietta, who is concerned that the 2015 animated musical sports fantasy film \u201cMy Little Pony: Equestria Girls \u2013 Friendship Games\u201d is no longer available for streaming on your platform. Please advise.\n\nThank you.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/blankenship' rel='external' target='_blank'>Joshua Blankenship<\/a> on <a href='https:\/\/twitter.com\/blankenship\/status\/1599893712380694530' rel='external' target='_blank'>December 5, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814043a65fbc",
+                "content": "Best high school musical sports fantasy drama to feature both mathletics and motocross with some cross-dimensional shenanigans.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-8140443c2dec",
+                "content": "What gives, <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/netflix\" rel=\"external\" target=\"_blank\">@netflix<\/a>? ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-814046185ae5",
+        "user_id": 1,
+        "timestamp": "2022-12-05T13:24:42.000+00:00",
+        "slug": "1599756650172350464",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-814045e03f84",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-814045dda3b4",
+                    "url": "https:\/\/twitter.com\/TartiiCat\/status\/1599608921928376323",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/TartiiCat\/status\/1599608921928376323",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-814045908bfa",
+                    "url": "https:\/\/twitter.com\/TartiiCat\/status\/1599608921928376323",
+                    "title": "\ud83d\udc51 Tartii \ud83e\udd8c Koraidon Enjoyer \ud83d\udd34 on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "They're best friends, cut from the same cloth. \ud83d\udc09\u2764\ufe0f https:\/\/t.co\/YqLjn9ZBMS",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/TartiiCat' rel='external' target='_blank'>\ud83d\udc51 Tartii \ud83e\udd8c Koraidon Enjoyer \ud83d\udd34<\/a> on <a href='https:\/\/twitter.com\/TartiiCat\/status\/1599608921928376323' rel='external' target='_blank'>December 5, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814045e332b1",
+                "content": "False. Koraidon ate the whole sandwich and didn\u2019t share. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81404a7031b6",
+        "user_id": 1,
+        "timestamp": "2022-12-04T02:06:02.000+00:00",
+        "slug": "1599223472692940801",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81404849bc02",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-8140474deda2",
+                    "url": "https:\/\/twitter.com\/sportswithjohn\/status\/1599125753437659136",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/sportswithjohn\/status\/1599125753437659136",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-814046533554",
+                    "url": "https:\/\/twitter.com\/sportswithjohn\/status\/1599125753437659136",
+                    "title": "John Green Parody Account Run by John Green on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "How lucky are we to share a planet with Lionel Messi?",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/sportswithjohn' rel='external' target='_blank'>John Green Parody Account Run by John Green<\/a> on <a href='https:\/\/twitter.com\/sportswithjohn\/status\/1599125753437659136' rel='external' target='_blank'>December 3, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814048a138c2",
+                "content": "I'm working on Twitter import for <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/_smolblog\" rel=\"external\" target=\"_blank\">@_smolblog<\/a> and I want to know what it looks like in the API to have more than one linked tweet. So enjoy this ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81404933392c",
+                "url": "https:\/\/twitter.com\/blankenship\/status\/1599213233600012288",
+                "response": null,
+                "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814049e491b0",
+                "content": " and also this ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81404b612348",
+        "user_id": 1,
+        "timestamp": "2022-12-03T21:52:42.000+00:00",
+        "slug": "1599159719129661440",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81404b358046",
+                "content": "Ok, <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/EpicGames\" rel=\"external\" target=\"_blank\">@EpicGames<\/a>, I understand Fortnite is \u201cgone\u201d for right now, but is the store login supposed to be down?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81404edbb30b",
+        "user_id": 1,
+        "timestamp": "2022-12-02T13:31:07.000+00:00",
+        "slug": "1598671104708673536",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81404df08873",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-81404d30fbc9",
+                    "url": "https:\/\/twitter.com\/MorePerfectUS\/status\/1598415914911039488",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/MorePerfectUS\/status\/1598415914911039488",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-81404c4695f2",
+                    "url": "https:\/\/twitter.com\/MorePerfectUS\/status\/1598415914911039488",
+                    "title": "More Perfect Union on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "BREAKING: Senate rejects legislation guaranteeing 7 days of paid sick leave as part of the rail labor agreement. \n\nVote was 52-43, needed 60 to pass.\n\nAll Democrats voted yes except Manchin. All Republicans voted no except 6 (Braun, Cruz, Graham, Hawley, Kennedy, Rubio).",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/MorePerfectUS' rel='external' target='_blank'>More Perfect Union<\/a> on <a href='https:\/\/twitter.com\/MorePerfectUS\/status\/1598415914911039488' rel='external' target='_blank'>December 1, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81404e5d045c",
+                "content": "Credit where credit is due: proud of you for this, <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/LindseyGrahamSC\" rel=\"external\" target=\"_blank\">@LindseyGrahamSC<\/a>. Wish it had been enough. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81404fe98bb9",
+        "user_id": 1,
+        "timestamp": "2022-11-30T14:31:03.000+00:00",
+        "slug": "1597961410998407171",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81404f5412f7",
+                "content": "You\u2019ve heard of a horse in a hospital? Get ready for a goat in a grocery store! <a href=\"https:\/\/www.tiktok.com\/t\/ZTRC4yoP3\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">tiktok.com\/t\/ZTRC4yoP3\/<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-8140518a9aec",
+        "user_id": 1,
+        "timestamp": "2022-11-30T02:17:05.000+00:00",
+        "slug": "1597776699994710017",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-814050923cbb",
+                "content": "Microblog\/mastodon is now mirrored at <a href=\"http:\/\/oddevan.tumblr.com\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">oddevan.tumblr.com<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405259b9a8",
+        "user_id": 1,
+        "timestamp": "2022-11-29T13:05:45.000+00:00",
+        "slug": "1597577554256429056",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81405219ebde",
+                "content": "\ud83c\udfb5 Gonna ask this again, like I do almost every year: anyone know any good new wave\/retro wave\/synthpop\/EDM Christmas music?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405306e114",
+        "user_id": 1,
+        "timestamp": "2022-11-29T12:56:08.000+00:00",
+        "slug": "1597575135506079747",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-814052738948",
+                "content": "The Mythbusters said that lying down and resting is 90% as good as actual sleep. The day after restarting Vyvanse post-vacation, I desperately need that to be true.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405583d636",
+        "user_id": 1,
+        "timestamp": "2022-11-27T19:06:08.000+00:00",
+        "slug": "1596943473399185408",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-814053a8e385",
+                "content": "\ud83c\udfb5 Okay, what\u2019re the songs that, if you let them, will absolutely make you cry? For me, it\u2019s",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814054388208",
+                "content": "\u201cWalk On\u201d \/ U2<br \/>\n\u201cDare You To Move\u201d \/ Switchfoot<br \/>\n\u201cHappy Is a Yuppie Word\u201d \/ Switchfoot<br \/>\n\u201cChristmas Don\u2019t Be Late\u201d \/ Rosie Thomas",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814054dca7c2",
+                "content": "\u2026among others.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-8140568b5967",
+        "user_id": 1,
+        "timestamp": "2022-11-26T17:51:34.000+00:00",
+        "slug": "1596562318644551681",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-8140558d9ffd",
+                "content": "Via <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/WhollySchmidt\" rel=\"external\" target=\"_blank\">@WhollySchmidt<\/a> ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81405596af19",
+                "url": "https:\/\/twitter.com\/WhollySchmidt\/status\/1596560295593385991",
+                "response": null,
+                "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-8140562fca75",
+                "content": "",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-8140596849bb",
+        "user_id": 1,
+        "timestamp": "2022-11-26T17:50:27.000+00:00",
+        "slug": "1596562041225220096",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81405810b5b4",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-814057fea68f",
+                    "url": "https:\/\/twitter.com\/DiscussingFilm\/status\/1596202096483000321",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/DiscussingFilm\/status\/1596202096483000321",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-8140576e471e",
+                    "url": "https:\/\/twitter.com\/DiscussingFilm\/status\/1596202096483000321",
+                    "title": "DiscussingFilm on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "DreamWorks Animation has revealed their new animated logo. https:\/\/t.co\/kgmHBFoo1S",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/DiscussingFilm' rel='external' target='_blank'>DiscussingFilm<\/a> on <a href='https:\/\/twitter.com\/DiscussingFilm\/status\/1596202096483000321' rel='external' target='_blank'>November 25, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814058a8bb66",
+                "content": "I love a lot of what Marvel has done, but I loathe their 30s \u201clook at us\u201d logo that they use like opening titles and not a publisher\u2019s stamp. And of course everyone copies without thinking. Case in point: the new Dreamworks logo. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405b330881",
+        "user_id": 1,
+        "timestamp": "2022-11-23T17:18:58.000+00:00",
+        "slug": "1595466951983259652",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81405a498245",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-81405a23dbe0",
+                    "url": "https:\/\/twitter.com\/photomatt\/status\/1594577983028740096",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/photomatt\/status\/1594577983028740096",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-814059edc455",
+                    "url": "https:\/\/twitter.com\/photomatt\/status\/1594577983028740096",
+                    "title": "Matt Mullenweg on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "@seldo Come to @tumblr. We'll add activitypub for interconnect. Don't stress.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/photomatt' rel='external' target='_blank'>Matt Mullenweg<\/a> on <a href='https:\/\/twitter.com\/photomatt\/status\/1594577983028740096' rel='external' target='_blank'>November 21, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81405a554dba",
+                "content": "Huge if true! ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405bd1d3ad",
+        "user_id": 1,
+        "timestamp": "2022-11-23T13:31:51.000+00:00",
+        "slug": "1595409797402087424",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81405bb5ab91",
+                "content": "I tend to frequent a local coffee shop for waffles. Today\u2019s soundtrack as I walked in was \u201cI\u2019m Still Standing,\u201d \u201cFunky Town\u201d as I waited, and \u201cTake On Me\u201d as I left.<br \/>\nThis bodes well for today.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405de09f3b",
+        "user_id": 1,
+        "timestamp": "2022-11-23T00:10:44.000+00:00",
+        "slug": "1595208188349059072",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81405c0f505c",
+                "content": "So... sometimes the only way to win is not to play.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81405c1a305c",
+                "content": "- @oddevan@micro.blog \/ <a href=\"https:\/\/status.eph.me\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">status.eph.me<\/a><br \/>\n- <a href=\"https:\/\/paperairplanemob.tumblr.com\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">paperairplanemob.tumblr.com<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81405cf73ec2",
+                "content": "Social media is just blogging by another name. We're building a better one at <a href=\"https:\/\/smolblog.com\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">smolblog.com<\/a>.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81405d98c0de",
+                "content": "\ud83d\udd96\ud83c\udffb",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81405f68c49d",
+        "user_id": 1,
+        "timestamp": "2022-11-22T23:53:58.000+00:00",
+        "slug": "1595203968598249473",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81405e8c8324",
+                "content": "I\u2019m a web developer. I have, if I\u2019m honest, some pretty good skills in that area. And that tends to give me some unhealthy internal motivation. (I can DIY, therefore I should.)<br \/>\nFeels good to let that go, TBH.<br \/>\nPosted from <a href=\"https:\/\/status.eph.me\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">status.eph.me<\/a> \ud83d\ude0e",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81406800491d",
+        "user_id": 1,
+        "timestamp": "2022-11-19T13:47:01.000+00:00",
+        "slug": "1593964061544284162",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-8140669a8852",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-814065a9703c",
+                    "url": "https:\/\/twitter.com\/eevee\/status\/1593866825518882816",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/eevee\/status\/1593866825518882816",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-81406544d065",
+                    "url": "https:\/\/twitter.com\/eevee\/status\/1593866825518882816",
+                    "title": "eevee \u2622\ufe0f on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "i would simply have my lead pok\u00e9mon auto battle all 40\u201350 feral hogs",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/eevee' rel='external' target='_blank'>eevee \u2622\ufe0f<\/a> on <a href='https:\/\/twitter.com\/eevee\/status\/1593866825518882816' rel='external' target='_blank'>November 19, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814067749599",
+                "content": "No but for real you can level up SO FAST by just going ham on some lechonks. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-814069d651e9",
+        "user_id": 1,
+        "timestamp": "2022-11-18T23:35:18.000+00:00",
+        "slug": "1593749721398792193",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-814068f6e9f3",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5536-7167-bb53-814068376043",
+                    "url": "https:\/\/twitter.com\/DesignatedWittR\/status\/1593586860290609152",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/DesignatedWittR\/status\/1593586860290609152",
+                "link": {
+                    "id": "0184fdef-5536-7167-bb53-814068238556",
+                    "url": "https:\/\/twitter.com\/DesignatedWittR\/status\/1593586860290609152",
+                    "title": "Designated(t)Witter on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "fuecoco is the definition of \"no thoughts, head empty\" #PokemonScarletViolet #NintendoSwitch https:\/\/t.co\/yU8ArCzW2F",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/DesignatedWittR' rel='external' target='_blank'>Designated(t)Witter<\/a> on <a href='https:\/\/twitter.com\/DesignatedWittR\/status\/1593586860290609152' rel='external' target='_blank'>November 18, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-814069c839af",
+                "content": "Guess which one I picked\u2026 ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5536-7167-bb53-81406bda3dd7",
+        "user_id": 1,
+        "timestamp": "2022-11-18T12:29:46.000+00:00",
+        "slug": "1593582232651718657",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5536-7167-bb53-81406a1138ee",
+                "content": "I\u2019m working on a platform, but it\u2019s not even close to ready.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81406afdd9ca",
+                "content": "If you\u2019re willing to pay, <a href=\"http:\/\/micro.blog\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">micro.blog<\/a> has a really good experience, and I think they just added Mastodon support. And it exists now.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5536-7167-bb53-81406b6c97a5",
+                "content": "I\u2019ll probably end up dusting off my <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/oddevan\" rel=\"external\" target=\"_blank\">@oddevan<\/a> account here too.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba750d966a",
+        "user_id": 1,
+        "timestamp": "2022-11-16T18:23:33.000+00:00",
+        "slug": "1592946491387174913",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba750bdec0",
+                "content": "Anyone have any recommended Jekyll themes for developer documentation? If I\u2019m going to ask for help with <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/_smolblog\" rel=\"external\" target=\"_blank\">@_smolblog<\/a> I gotta write some docs.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba78ea7204",
+        "user_id": 1,
+        "timestamp": "2022-11-13T14:57:53.000+00:00",
+        "slug": "1591807571089887232",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba789b34f4",
+                "content": "For science: here\u2019s what happens when you tell Siri (via CarPlay) to send a message, then just laugh maniacally for 30s. <a href=\"https:\/\/twitter.com\/oddevan\/status\/1591807571089887232\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/3AB2Xv7rG6<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba7ae7b91a",
+        "user_id": 1,
+        "timestamp": "2022-11-12T19:57:59.000+00:00",
+        "slug": "1591520705518206976",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba79d1f1d6",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba7963b4fa",
+                    "url": "https:\/\/twitter.com\/NinEverything\/status\/1589723865617309696",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/NinEverything\/status\/1589723865617309696",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba794a3012",
+                    "url": "https:\/\/twitter.com\/NinEverything\/status\/1589723865617309696",
+                    "title": "Nintendo Everything on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "SEGA looking to hire a Sonic the Hedgehog loremaster https:\/\/t.co\/6pfRWBSnJ1 https:\/\/t.co\/pwF87qKJU3",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/NinEverything' rel='external' target='_blank'>Nintendo Everything<\/a> on <a href='https:\/\/twitter.com\/NinEverything\/status\/1589723865617309696' rel='external' target='_blank'>November 7, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba7a157dda",
+                "content": "Paging <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/netraptor01\" rel=\"external\" target=\"_blank\">@netraptor01<\/a> ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba7fbea144",
+        "user_id": 1,
+        "timestamp": "2022-11-11T15:53:49.000+00:00",
+        "slug": "1591096869584867339",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba7de65ced",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba7d404960",
+                    "url": "https:\/\/twitter.com\/blankenship\/status\/1591094544250331136",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/blankenship\/status\/1591094544250331136",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba7d3241ec",
+                    "url": "https:\/\/twitter.com\/blankenship\/status\/1591094544250331136",
+                    "title": "Joshua Blankenship on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "So\u2026 blogs, right? All you lovely, smart people I\u2019ve been reading and learning from and connecting with on this godforsaken hellsite, you\u2019ve got your name dot com and you\u2019re going to start writing there? Or a newsletter? Pretty please? I will if you will.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/blankenship' rel='external' target='_blank'>Joshua Blankenship<\/a> on <a href='https:\/\/twitter.com\/blankenship\/status\/1591094544250331136' rel='external' target='_blank'>November 11, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba7ede37ef",
+                "content": "Hey, if any of y\u2019all peeps need a blog, hit me up. I\u2019ve got a smol server with room for friends. \ud83d\ude09 ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba80dedb11",
+        "user_id": 1,
+        "timestamp": "2022-11-10T22:46:38.000+00:00",
+        "slug": "1590838368346284057",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba802b2744",
+                "content": "For the record: my blog is at <a href=\"http:\/\/oddevan.com\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">oddevan.com<\/a>. Other links at <a href=\"http:\/\/eph.me\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">eph.me<\/a>.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba80622a59",
+                "content": "And if you want to help build <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/_smolblog\" rel=\"external\" target=\"_blank\">@_smolblog<\/a>, holler at me and we can talk.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba83b8f52c",
+        "user_id": 1,
+        "timestamp": "2022-11-07T02:27:42.000+00:00",
+        "slug": "1589444452661198848",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba830606fe",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba828f96b5",
+                    "url": "https:\/\/twitter.com\/johngreen\/status\/1589441057175273472",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/johngreen\/status\/1589441057175273472",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba827f1ce0",
+                    "url": "https:\/\/twitter.com\/johngreen\/status\/1589441057175273472",
+                    "title": "John Green on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "It's as if in 2014, I'd been like, \"I'll just buy tumblr.\"",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/johngreen' rel='external' target='_blank'>John Green<\/a> on <a href='https:\/\/twitter.com\/johngreen\/status\/1589441057175273472' rel='external' target='_blank'>November 7, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba8397c9f3",
+                "content": " <a href=\"https:\/\/twitter.com\/oddevan\/status\/1589444452661198848\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/VzV0P1vwo8<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba871717ce",
+        "user_id": 1,
+        "timestamp": "2022-11-06T20:45:28.000+00:00",
+        "slug": "1589358326449577985",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba856d5710",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba84d8ee16",
+                    "url": "https:\/\/twitter.com\/igorbobic\/status\/1578366294449012736",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/igorbobic\/status\/1578366294449012736",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba8463b080",
+                    "url": "https:\/\/twitter.com\/igorbobic\/status\/1578366294449012736",
+                    "title": "Igor Bobic on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Roy Blunt urged Trump's team to fire Alan Dershowitz and Ted Cruz pressed for a quasi-admission of guilt Trump didn't want.\n\n\u201cOut of one hundred senators, you have zero who believe you that there was no quid pro quo. None. There\u2019s not a single one,\u201d Cruz warned, per the book",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/igorbobic' rel='external' target='_blank'>Igor Bobic<\/a> on <a href='https:\/\/twitter.com\/igorbobic\/status\/1578366294449012736' rel='external' target='_blank'>October 7, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba863eaea3",
+                "content": "Hey <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/SenatorTimScott\" rel=\"external\" target=\"_blank\">@SenatorTimScott<\/a>, need your answer for this. Did you know the President was guilty and vote to acquit?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba86bae4b5",
+                "content": "Tell me. Tell me and every other South Carolinian going to the polls on Tuesday. Did you knowingly abandon your duty to our Constitution and acquit a guilty President? ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba896439e2",
+        "user_id": 1,
+        "timestamp": "2022-11-05T16:21:53.000+00:00",
+        "slug": "1588929606043713536",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba87aee2a6",
+                "content": "I\u2019m in this picture and I don\u2019t like it. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba88687b93",
+                "url": "https:\/\/twitter.com\/damedoteth\/status\/1588927610284740609",
+                "response": null,
+                "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba892b1801",
+                "content": "",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba8d729974",
+        "user_id": 1,
+        "timestamp": "2022-11-04T12:24:01.000+00:00",
+        "slug": "1588507355871952904",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba8bafd841",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba8ab8d7e1",
+                    "url": "https:\/\/twitter.com\/rsms\/status\/1588410222942760965",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/rsms\/status\/1588410222942760965",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba8a283d9e",
+                    "url": "https:\/\/twitter.com\/rsms\/status\/1588410222942760965",
+                    "title": "Rasmus Andersson on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Ex twitter employees, get together and build this:\n\n1. Make a twitter clone (only text for v1) Shouldn\u2019t take more than a day or three.\n\n2. For the first year people can only sign up by authenticating with twitter; their username, tweets, followers and followees are copied.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/rsms' rel='external' target='_blank'>Rasmus Andersson<\/a> on <a href='https:\/\/twitter.com\/rsms\/status\/1588410222942760965' rel='external' target='_blank'>November 4, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba8ca7f5a0",
+                "content": "I\u2019m working on the new improved version, but the current working version of my WordPress plugin to download and sync your Twitter is here: <a href=\"https:\/\/GitHub.com\/smolblog\/smolblog-social\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">GitHub.com\/smolblog\/smolb\u2026<\/a> ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba92882e2e",
+        "user_id": 1,
+        "timestamp": "2022-10-29T23:42:03.000+00:00",
+        "slug": "1586503662662303746",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba91115cc6",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba90487af0",
+                    "url": "https:\/\/twitter.com\/EatFellowHumans\/status\/1586501929114472451",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/EatFellowHumans\/status\/1586501929114472451",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba8fdf6401",
+                    "url": "https:\/\/twitter.com\/EatFellowHumans\/status\/1586501929114472451",
+                    "title": "Justin Warner on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Happy halloween https:\/\/t.co\/izn9WGwhkw",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/EatFellowHumans' rel='external' target='_blank'>Justin Warner<\/a> on <a href='https:\/\/twitter.com\/EatFellowHumans\/status\/1586501929114472451' rel='external' target='_blank'>October 29, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba919bd077",
+                "content": "Notorious! ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba94adce06",
+        "user_id": 1,
+        "timestamp": "2022-10-29T22:36:40.000+00:00",
+        "slug": "1586487208160239617",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba9327295b",
+                "content": "A staple of the <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/GVLRiot\" rel=\"external\" target=\"_blank\">@GVLRiot<\/a> tailgates is the shotguns. Do I participate? No, not really. Do I obsessively shoot wide angle shots of the deed and slow motion shots of opening the cans? Yes. Yes I do. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba939a0985",
+                "url": "https:\/\/twitter.com\/i\/web\/status\/1586487208160239617",
+                "response": null,
+                "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba93f5e8de",
+                "content": " <a href=\"https:\/\/twitter.com\/oddevan\/status\/1586487208160239617\/video\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/tyiWDkWtzg<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba97bab94b",
+        "user_id": 1,
+        "timestamp": "2022-10-29T02:40:40.000+00:00",
+        "slug": "1586186226280841216",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba9639f840",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-5537-72c9-914f-27ba95a0aa19",
+                    "url": "https:\/\/twitter.com\/britthildreth\/status\/1586185548393517056",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/britthildreth\/status\/1586185548393517056",
+                "link": {
+                    "id": "0184fdef-5537-72c9-914f-27ba955cca70",
+                    "url": "https:\/\/twitter.com\/britthildreth\/status\/1586185548393517056",
+                    "title": "Brittany Hildreth on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "TIL about osteo-odonto-keratoprosthesis, a surgery where a tooth is embedded in the eye of patients with corneas to bring back their sight. It started in the 60s and honestly blows my mind. https:\/\/t.co\/oacwkVmFHx",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/britthildreth' rel='external' target='_blank'>Brittany Hildreth<\/a> on <a href='https:\/\/twitter.com\/britthildreth\/status\/1586185548393517056' rel='external' target='_blank'>October 29, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba97195d72",
+                "content": "\u201cBut you\u2019re a dentist! How can you work on someone\u2019s eyes?\u201d<br \/>\n\u201cEasy! I\u2019ll put a tooth in there!\u201d",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba977a7771",
+                "content": "This tweet is about node.js. \ud83d\ude0e ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-5537-72c9-914f-27ba98b0d189",
+        "user_id": 1,
+        "timestamp": "2022-10-26T23:50:45.000+00:00",
+        "slug": "1585418686634274816",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-5537-72c9-914f-27ba98099d70",
+                "content": "TFW your add-on package gets \"officially\" listed on the unofficial clients page of a <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/thephpleague\" rel=\"external\" target=\"_blank\">@thephpleague<\/a> package... <a href=\"https:\/\/oauth2-client.thephpleague.com\/providers\/thirdparty\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">oauth2-client.thephpleague.com\/providers\/thir\u2026<\/a> <a href=\"https:\/\/twitter.com\/oddevan\/status\/1585418686634274816\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/b66S0VkifR<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-2224274a2513",
+        "user_id": 1,
+        "timestamp": "2022-10-23T20:25:20.000+00:00",
+        "slug": "1584279829850963968",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-222426535026",
+                "content": "OK guys, I think I finally, <em>finally<\/em> get SOLID and Dependency Injection. <a href=\"https:\/\/smolblog.com\/2022\/10\/23\/building-smolblog-separation\/\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">smolblog.com\/2022\/10\/23\/bui\u2026<\/a> <a href=\"https:\/\/twitter.com\/search?q=%23php\" title=\"#php\" class=\"tweet-url hashtag\" rel=\"external\" target=\"_blank\">#php<\/a> <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/_smolblog\" rel=\"external\" target=\"_blank\">@_smolblog<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-2224290c082f",
+        "user_id": 1,
+        "timestamp": "2022-10-21T23:44:55.000+00:00",
+        "slug": "1583605280621092864",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-222428a6a9f4",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-2224289fd6b5",
+                    "url": "https:\/\/twitter.com\/LisaSabinWilson\/status\/1583561423292026880",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/LisaSabinWilson\/status\/1583561423292026880",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-222427ec3b77",
+                    "url": "https:\/\/twitter.com\/LisaSabinWilson\/status\/1583561423292026880",
+                    "title": "LSW \u262e\ufe0f on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Big congrats to @jpalmes on her recent promotion from Lead Engineer to Engineering Manager for our team @webdevstudios !  A well deserved promotion for a hard working and talented woman \ud83d\ude4c https:\/\/t.co\/p4GTTui4ZK",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/LisaSabinWilson' rel='external' target='_blank'>LSW \u262e\ufe0f<\/a> on <a href='https:\/\/twitter.com\/LisaSabinWilson\/status\/1583561423292026880' rel='external' target='_blank'>October 21, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-222428a78db6",
+                "content": "Way to go, <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/jpalmes\" rel=\"external\" target=\"_blank\">@jpalmes<\/a>!!!  <a href=\"https:\/\/twitter.com\/oddevan\/status\/1583605280621092864\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/fWX59H4YJj<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22242eb1c393",
+        "user_id": 1,
+        "timestamp": "2022-10-21T00:17:48.000+00:00",
+        "slug": "1583251168356368384",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-22242de3dc9a",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-22242dd9a89a",
+                    "url": "https:\/\/twitter.com\/madcrasher\/status\/1583248137786773504",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/madcrasher\/status\/1583248137786773504",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-22242d78d38f",
+                    "url": "https:\/\/twitter.com\/madcrasher\/status\/1583248137786773504",
+                    "title": "madcrasher on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Love the prideful. Love the haters.\nLove your enemies. Love your neighbors;\nNo \u201cif\u201ds, \u201cand\u201ds, \u201cmaybe\u201ds, or \u201cbut\u201ds\nBecause the \u201cgreatest single cause\u201d is us.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/madcrasher' rel='external' target='_blank'>madcrasher<\/a> on <a href='https:\/\/twitter.com\/madcrasher\/status\/1583248137786773504' rel='external' target='_blank'>October 21, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22242e15317b",
+                "content": "Little rhyme that\u2019s been in my head past few days. Don\u2019t have a song for it, so you get the tweet. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-222433f7d630",
+        "user_id": 1,
+        "timestamp": "2022-10-19T00:39:28.000+00:00",
+        "slug": "1582531846130335745",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-222431ff0473",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-222431f0939d",
+                    "url": "https:\/\/twitter.com\/hunktears\/status\/1552855418145087490",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/hunktears\/status\/1552855418145087490",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-222431a81f0c",
+                    "url": "https:\/\/twitter.com\/hunktears\/status\/1552855418145087490",
+                    "title": "the \"aristotle\" of being nice :) on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "if Mario Kart was about pure driving I would win every race but unfortunately my competitors insist on engaging in a great deal of unsportsmanlike behaviour",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/hunktears' rel='external' target='_blank'>the \"aristotle\" of being nice :)<\/a> on <a href='https:\/\/twitter.com\/hunktears\/status\/1552855418145087490' rel='external' target='_blank'>July 29, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-2224329e0a89",
+                "content": "Listen, I know this is a joke\u2026",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-222433713bfe",
+                "content": "But I will never forget that one time at college when the pro gamer rage quit a game of MKDD yelling about how \u201cit would be a great racing game if it weren\u2019t for the f\u2014ing items!\u201d ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-222435c47785",
+        "user_id": 1,
+        "timestamp": "2022-10-18T14:14:56.000+00:00",
+        "slug": "1582374677908926466",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-2224354d49d1",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-222434b9fc65",
+                    "url": "https:\/\/twitter.com\/AustinCreedWins\/status\/1582355065305649153",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/AustinCreedWins\/status\/1582355065305649153",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-2224343b5221",
+                    "url": "https:\/\/twitter.com\/AustinCreedWins\/status\/1582355065305649153",
+                    "title": "Austin Creed on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Unfortunately @G4TV has come to an end but I am beyond glad that I got the chance to meet and learn from so many amazing and talented people. Thank you to everyone who supported us! And thank you for helping me get the chance to live out a huge goal. https:\/\/t.co\/Q9izMN58Qq",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/AustinCreedWins' rel='external' target='_blank'>Austin Creed<\/a> on <a href='https:\/\/twitter.com\/AustinCreedWins\/status\/1582355065305649153' rel='external' target='_blank'>October 18, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-2224355fe9a5",
+                "content": "Wasn\u2019t able to watch as much h as I wanted, but I was happy to see what y\u2019all were building. Looked (from here at least) like our best selves, showing who we as gamers could be. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22243a690710",
+        "user_id": 1,
+        "timestamp": "2022-10-15T18:09:13.000+00:00",
+        "slug": "1581346472544854016",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-222439eaf980",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-222439c3981f",
+                    "url": "https:\/\/twitter.com\/RudyCerda\/status\/1580662935063760897",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/RudyCerda\/status\/1580662935063760897",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-2224394f381f",
+                    "url": "https:\/\/twitter.com\/RudyCerda\/status\/1580662935063760897",
+                    "title": "Rudy Cerda on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Tell me how long you've been using computers without telling me how long you've been using computers.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/RudyCerda' rel='external' target='_blank'>Rudy Cerda<\/a> on <a href='https:\/\/twitter.com\/RudyCerda\/status\/1580662935063760897' rel='external' target='_blank'>October 13, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-222439f798b4",
+                "content": "moof ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22243aa55de6",
+        "user_id": 1,
+        "timestamp": "2022-10-12T22:20:47.000+00:00",
+        "slug": "1580322616845664256",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-22243a7a69f9",
+                "content": "Got it. Apparently getting an access token requires the redirect URL? <a href=\"https:\/\/twitter.com\/oddevan\/status\/1580322616845664256\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/feAtsrVbqt<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22243f4500be",
+        "user_id": 1,
+        "timestamp": "2022-10-12T11:50:46.000+00:00",
+        "slug": "1580164067448455170",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-22243dee4717",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-22243db9a2c3",
+                    "url": "https:\/\/twitter.com\/MacRumors\/status\/1580141407813017600",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/MacRumors\/status\/1580141407813017600",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-22243d9a93f8",
+                    "url": "https:\/\/twitter.com\/MacRumors\/status\/1580141407813017600",
+                    "title": "MacRumors.com on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Intel Reportedly Plans Thousands of Layoffs Amid PC Market Slowdown https:\/\/t.co\/kHcpEXDXwd by @waxeditorial https:\/\/t.co\/37KjhliBSQ",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/MacRumors' rel='external' target='_blank'>MacRumors.com<\/a> on <a href='https:\/\/twitter.com\/MacRumors\/status\/1580141407813017600' rel='external' target='_blank'>October 12, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22243ee4042e",
+                "content": "Didn\u2019t they just get a bunch of funding from the government? ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22244388c995",
+        "user_id": 1,
+        "timestamp": "2022-10-10T15:16:05.000+00:00",
+        "slug": "1579490962174185472",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-222442299ecb",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-222441b311f3",
+                    "url": "https:\/\/twitter.com\/alexplitsas\/status\/1579430456105533442",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/alexplitsas\/status\/1579430456105533442",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-222440cde072",
+                    "url": "https:\/\/twitter.com\/alexplitsas\/status\/1579430456105533442",
+                    "title": "Alex Plitsas \ud83c\uddfa\ud83c\uddf8 on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "I say all of this as a registered Republican, former local party chairman in Connecticut, and former Pentagon official with oversight for information operations. This is incredibly dangerous and we cannot allow Putin to divide us internally as Americans to further his objectives.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/alexplitsas' rel='external' target='_blank'>Alex Plitsas \ud83c\uddfa\ud83c\uddf8<\/a> on <a href='https:\/\/twitter.com\/alexplitsas\/status\/1579430456105533442' rel='external' target='_blank'>October 10, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244318ce3d",
+                "content": "Russian propaganda is still here, people. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-2224453eb4e6",
+        "user_id": 1,
+        "timestamp": "2022-10-10T02:21:16.000+00:00",
+        "slug": "1579295971162275840",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-2224441a7000",
+                "content": "Well, that's encouraging.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-222444925942",
+                "content": "As an aside, anyone familiar with OAuth2, the Twitter API, PHP, and\/or WordPress? I could use your eyes: <a href=\"https:\/\/stackoverflow.com\/questions\/74009688\/twitter-oauth-2-0-responding-with-value-passed-for-the-token-was-invalid\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">stackoverflow.com\/questions\/7400\u2026<\/a> <a href=\"https:\/\/twitter.com\/oddevan\/status\/1579295971162275840\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/AD00fhK8Wa<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-2224472f36e9",
+        "user_id": 1,
+        "timestamp": "2022-10-05T01:17:02.000+00:00",
+        "slug": "1577467870669197312",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-222447022827",
+                "content": "So... <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/_jmichaelward\" rel=\"external\" target=\"_blank\">@_jmichaelward<\/a> <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/tommcfarlin\" rel=\"external\" target=\"_blank\">@tommcfarlin<\/a> y'all proud of me yet? \ud83d\ude0e <a href=\"https:\/\/twitter.com\/oddevan\/status\/1577467870669197312\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/iQcKGNkNFf<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22244c21ad92",
+        "user_id": 1,
+        "timestamp": "2022-10-03T14:24:35.000+00:00",
+        "slug": "1576941286766125061",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-22244b7aec4f",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553b-707b-9e78-22244b361eb1",
+                    "url": "https:\/\/twitter.com\/eevee\/status\/1576852823341342721",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/eevee\/status\/1576852823341342721",
+                "link": {
+                    "id": "0184fdef-553b-707b-9e78-22244b27ab35",
+                    "url": "https:\/\/twitter.com\/eevee\/status\/1576852823341342721",
+                    "title": "eevee \u2622\ufe0f on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "at that point it will be impossible to start over, because two thirds of the web will be seo spam with machine generated prose underneath machine generated hero images.  and then machine learning will be dead",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/eevee' rel='external' target='_blank'>eevee \u2622\ufe0f<\/a> on <a href='https:\/\/twitter.com\/eevee\/status\/1576852823341342721' rel='external' target='_blank'>October 3, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244be62598",
+                "content": "IIRC this is one reason why Google shut off their website translation API: they were training it on translated websites, but eventually all the multilingual websites were using their translations. Instead of learning, it became self-reinforcing. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22244da2d62c",
+        "user_id": 1,
+        "timestamp": "2022-10-02T16:08:32.000+00:00",
+        "slug": "1576605057923039234",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-22244c971cfc",
+                "content": "Because January 6 was a wake-up call. And the current GOP is doing <em>everything<\/em> they can to make sure nothing comes of it.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244ce5d19f",
+                "content": "So if you want me to believe that the GOP is more than Carlson and Trump and MT-G and Cruz, give me something to believe in.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244d445c0b",
+                "content": "Please.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244d5a91f7",
+                "content": "My country needs you.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553b-707b-9e78-22244ed9f9c6",
+        "user_id": 1,
+        "timestamp": "2022-10-02T16:04:09.000+00:00",
+        "slug": "1576603956322734082",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553b-707b-9e78-22244dbdc813",
+                "content": "Where is the line?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244dd12d62",
+                "content": "At what point is it \u201ctoo much\u201d?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553b-707b-9e78-22244eb5f850",
+                "content": "What has to happen for you to vote against them? (Not just abstaining, not just a \u201cprincipled\u201d 3rd party vote, but actually throwing weight behind their biggest opponents.)",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c43ca08e1",
+        "user_id": 1,
+        "timestamp": "2022-10-02T15:59:54.000+00:00",
+        "slug": "1576602887756697600",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c42d5f6ad",
+                "content": "I\u2019ll admit, I\u2019m pretty fatalistic. While I never actually joined the GOP. I usually identified with them until the mid-2010s. It\u2019s easier for me to write something off rather than try to change it.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c4374c3c6",
+                "content": "But I have to ask my neighbors who do still identify as Republican:",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c461b468d",
+        "user_id": 1,
+        "timestamp": "2022-10-02T15:56:16.000+00:00",
+        "slug": "1576601972223971328",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c441f5429",
+                "content": "And there is literally no one with any authority in the GOP speaking against it.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c44c7c444",
+                "content": "I remember when John McCain pushed back against Birthers at his own rallys, saying that Obama was indeed an American (though with fundamental political differences, of course).",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c451ee6bc",
+                "content": "Where is that now?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c48953527",
+        "user_id": 1,
+        "timestamp": "2022-10-02T15:52:26.000+00:00",
+        "slug": "1576601008310046721",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c470fcf67",
+                "content": "We have elected officials saying that Democrats are literally killing Republicans.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c47457041",
+                "content": "We have a state legislature deliberately flouting its state\u2019s Supreme Court\u2019s orders about election districts.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c47d04446",
+                "content": "This is so much more than the usual politics of saying one thing and doing another.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c4a605ec7",
+        "user_id": 1,
+        "timestamp": "2022-10-02T15:46:14.000+00:00",
+        "slug": "1576599448456675328",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c497d7501",
+                "content": "Neighbors, things are already bad. The Republican Party in the United States has no leaders in the party or candidates running for office that say the 2020 election was a fee and fair election. They reject any norms, rules, and (at this point) even laws that keep them from power.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c4d45e81c",
+        "user_id": 1,
+        "timestamp": "2022-10-02T15:39:31.000+00:00",
+        "slug": "1576597757154004995",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c4b7fdbbc",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c4b0289b3",
+                    "url": "https:\/\/twitter.com\/tzimmer_history\/status\/1575843311713386496",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/tzimmer_history\/status\/1575843311713386496",
+                "link": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c4af39878",
+                    "url": "https:\/\/twitter.com\/tzimmer_history\/status\/1575843311713386496",
+                    "title": "Thomas Zimmer on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "You don\u2019t have to know anything about history to understand that a situation in which the whole spectrum on the Right is united against democracy while everyone else is still debating whether or not the anti-democratic threat is really *that* bad is very, very dangerous.",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/tzimmer_history' rel='external' target='_blank'>Thomas Zimmer<\/a> on <a href='https:\/\/twitter.com\/tzimmer_history\/status\/1575843311713386496' rel='external' target='_blank'>September 30, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c4bbad096",
+                "content": "Been thinking about this a lot this week.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c4bc2608a",
+                "content": "Had a Twitter convo a few days back where a mutual said the Right would be tempted to align with opportunists. I said it was already happening.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c4c9b53eb",
+                "content": "He just said it would get worse.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c4ccd675c",
+                "content": "I let it go when others got involved, but\u2026 ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c5404be95",
+        "user_id": 1,
+        "timestamp": "2022-09-28T02:11:04.000+00:00",
+        "slug": "1574944752017068034",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c50d16b90",
+                "content": "Character A: But you\u2019re in a hive mind! How can you play Mario Kart if they know everything you\u2019re going to do?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c51bfbe4a",
+                "content": "Character B: Oh, that isn\u2019t going to help them, since I know everything they\u2019re going to do.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c5216bf47",
+                "content": "A: Huh.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c52888aa2",
+                "content": "B: Yeah. Strange, isn\u2019t it?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c53261e64",
+                "content": "<em>End Scene<\/em>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c55bcf4f6",
+        "user_id": 1,
+        "timestamp": "2022-09-27T15:24:57.000+00:00",
+        "slug": "1574782151681351681",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c54a76fa7",
+                "content": "",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c54c19c51",
+                "url": "https:\/\/twitter.com\/johngreen\/status\/1574781544304099334",
+                "response": null,
+                "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c55b3af13",
+                "content": " <a href=\"https:\/\/twitter.com\/oddevan\/status\/1574782151681351681\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/8vF7xkilrT<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c5904c1d5",
+        "user_id": 1,
+        "timestamp": "2022-09-26T16:14:36.000+00:00",
+        "slug": "1574432259570110464",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c587186de",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c580a3630",
+                    "url": "https:\/\/twitter.com\/ChikisChase\/status\/1574425611308863493",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/ChikisChase\/status\/1574425611308863493",
+                "link": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c57b157b0",
+                    "url": "https:\/\/twitter.com\/ChikisChase\/status\/1574425611308863493",
+                    "title": "Chiki's Chase \u2b50\ufe0f on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "Update 1.5 is out today! Lots to see in this one:\n\n\ud83c\udf1cLunar Ring upgrade\n\ud83d\udcc8Star combos, for enjoyers of numbers going up\n\ud83c\udfc62 new achievements\n\ud83d\udee0\ufe0fMany bug &amp; crash fixes! https:\/\/t.co\/bduKIepUiC",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/ChikisChase' rel='external' target='_blank'>Chiki's Chase \u2b50\ufe0f<\/a> on <a href='https:\/\/twitter.com\/ChikisChase\/status\/1574425611308863493' rel='external' target='_blank'>September 26, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c58fdd16a",
+                "content": "Literally just got the last achievement yesterday. <em>cracks knuckles<\/em> ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c5c315f84",
+        "user_id": 1,
+        "timestamp": "2022-09-25T13:28:04.000+00:00",
+        "slug": "1574027962458013696",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c59e69f78",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c592cc5a3",
+                    "url": "https:\/\/twitter.com\/reshmasaujani\/status\/1573692989561446400",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/reshmasaujani\/status\/1573692989561446400",
+                "link": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c591c278d",
+                    "url": "https:\/\/twitter.com\/reshmasaujani\/status\/1573692989561446400",
+                    "title": "reshmasaujani on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "I woke up this morning to a news alert that our @GirlsWhoCode middle-grade book series was banned by some school districts as part of the Mom for Liberty effort to ban books. To be honest, I am so angry I cannot breathe.\nhttps:\/\/t.co\/5rBJkcGQDV",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/reshmasaujani' rel='external' target='_blank'>reshmasaujani<\/a> on <a href='https:\/\/twitter.com\/reshmasaujani\/status\/1573692989561446400' rel='external' target='_blank'>September 24, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c5a7f74b7",
+                "content": "We have to protect out children from deviant behavior like\u2026",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c5ad807d2",
+                "content": "<em>checks notes<\/em>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c5b67d1a6",
+                "content": "Computer Programming. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c6085cfd4",
+        "user_id": 1,
+        "timestamp": "2022-09-25T03:09:11.000+00:00",
+        "slug": "1573872213912158209",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c5f5bec1d",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c5f2a8edc",
+                    "url": "https:\/\/twitter.com\/GVLTriumph\/status\/1573868931051315200",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/GVLTriumph\/status\/1573868931051315200",
+                "link": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c5f03a271",
+                    "url": "https:\/\/twitter.com\/GVLTriumph\/status\/1573868931051315200",
+                    "title": "Greenville Triumph SC on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "91'- EVAN LEEEEEE!!! Greenville equalizes 1-1, with 2 minutes to go!\n\n1-0 | #NCOvGVL https:\/\/t.co\/afIJ5pX6sY",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/GVLTriumph' rel='external' target='_blank'>Greenville Triumph SC<\/a> on <a href='https:\/\/twitter.com\/GVLTriumph\/status\/1573868931051315200' rel='external' target='_blank'>September 25, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c5f952efa",
+                "content": "EVAN!!!!!!!! ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c68316abe",
+        "user_id": 1,
+        "timestamp": "2022-09-20T00:15:49.000+00:00",
+        "slug": "1572016643198296065",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c674854bc",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c6660678d",
+                    "url": "https:\/\/twitter.com\/CashApp\/status\/1572012741832966145",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/CashApp\/status\/1572012741832966145",
+                "link": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c65a582a8",
+                    "url": "https:\/\/twitter.com\/CashApp\/status\/1572012741832966145",
+                    "title": "Cash App on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "We\u2019re dropping a 99% off Apple Boost right now. QRT this with your $cashtag and AirDrop this to someone sitting next to you. Must be following @cashapp to win #CashAppBoostWeek",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/CashApp' rel='external' target='_blank'>Cash App<\/a> on <a href='https:\/\/twitter.com\/CashApp\/status\/1572012741832966145' rel='external' target='_blank'>September 20, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c67cb66d5",
+                "content": "$oddevan ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c69d267d3",
+        "user_id": 1,
+        "timestamp": "2022-09-18T01:36:07.000+00:00",
+        "slug": "1571312075422449664",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c69206d86",
+                "content": "<a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/dropout\" rel=\"external\" target=\"_blank\">@dropout<\/a> Still feel weird about how the official position of the company is that <strong>BLEEP<\/strong> is innocent, though\u2026 Hard to believe <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/samreich\" rel=\"external\" target=\"_blank\">@samreich<\/a> let\u2019s that happen.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c69ae68ae",
+                "content": "\ud83e\udd23\ud83e\udd23\ud83e\udd23\ud83e\udd23\ud83e\udd23\ud83e\udd23\ud83e\udd23",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c6d72c79f",
+        "user_id": 1,
+        "timestamp": "2022-09-18T01:16:04.000+00:00",
+        "slug": "1571307032199700480",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c6bfe87cc",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c6b4e2690",
+                    "url": "https:\/\/twitter.com\/britthildreth\/status\/1571296273801613314",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/britthildreth\/status\/1571296273801613314",
+                "link": {
+                    "id": "0184fdef-553c-73cd-a0d4-675c6a6ebdaf",
+                    "url": "https:\/\/twitter.com\/britthildreth\/status\/1571296273801613314",
+                    "title": "Brittany Hildreth on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "100% sure that I get the most value (especially for cost) out of @dropout versus any other platform I subscribe to, bar none. I tune in multiple times a week, every week. https:\/\/t.co\/fLuMSOwoGp",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/britthildreth' rel='external' target='_blank'>Brittany Hildreth<\/a> on <a href='https:\/\/twitter.com\/britthildreth\/status\/1571296273801613314' rel='external' target='_blank'>September 18, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c6cee202c",
+                "content": "Watching <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/dropout\" rel=\"external\" target=\"_blank\">@dropout<\/a> is like when I first started watching G4TechTV or Discovery Channel and just felt like everything was right up my alley. Well worth the price. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c727c92e2",
+        "user_id": 1,
+        "timestamp": "2022-09-17T21:21:26.000+00:00",
+        "slug": "1571247984343400452",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c6e579587",
+                "content": "Me: <em>finishing a plugin interface for <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/_smolblog\" rel=\"external\" target=\"_blank\">@_smolblog<\/a> and ready to start codifying a value type abstraction.<\/em>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c6e6ddd60",
+                "content": "My freezer: hey so I\u2019ve had my door open for a bit.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c6f534a11",
+                "content": "Me: \u2026how long?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c700e9cf0",
+                "content": "F: long enough for stuff to melt.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c70d18dee",
+                "content": "Me: and you didn\u2019t tell me because?",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c71992f55",
+                "content": "F: the door wasn\u2019t open <em>enough<\/em>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c7844e8a7",
+        "user_id": 1,
+        "timestamp": "2022-09-15T13:30:54.000+00:00",
+        "slug": "1570404793956597760",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c779c871b",
+                "content": "Today\u2019s morning find: Get any installed Composer packages of a particular type.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c77af9497",
+                "content": "So if you were to require a package of type, say, <code>smolblog-plugin<\/code>, the system could pick it up and include it automatically.",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553c-73cd-a0d4-675c79dbf306",
+        "user_id": 1,
+        "timestamp": "2022-09-13T01:17:53.000+00:00",
+        "slug": "1569495551514648576",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c7847d45f",
+                "content": "Wait, PHP has arrow functions?!",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c78b21307",
+                "content": "\u2026",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553c-73cd-a0d4-675c78f8b646",
+                "content": "I don\u2019t remember this coming up in a \ud83d\udc1d scrum, but now I\u2019m hearing <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/tommcfarlin\" rel=\"external\" target=\"_blank\">@tommcfarlin<\/a> trying to explain scoping while <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/richaber\" rel=\"external\" target=\"_blank\">@richaber<\/a> grumbles about \u201csyntactic sugar\u201d and <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/justinfoell\" rel=\"external\" target=\"_blank\">@justinfoell<\/a> tries\u2014with zero success\u2014to keep the conversation on topic. \ud83d\ude07",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553d-7210-b10d-3db1d341d03d",
+        "user_id": 1,
+        "timestamp": "2022-09-12T18:04:11.000+00:00",
+        "slug": "1569386405754769408",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553d-7210-b10d-3db1d2a8ecd1",
+                "content": "<a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/andrewramos\" rel=\"external\" target=\"_blank\">@andrewramos<\/a> And an Easter egg \ud83d\ude0e <a href=\"https:\/\/twitter.com\/oddevan\/status\/1569386405754769408\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/D4k8yGmSmB<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553d-7210-b10d-3db1d52332c2",
+        "user_id": 1,
+        "timestamp": "2022-09-12T18:02:08.000+00:00",
+        "slug": "1569385888055951361",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553d-7210-b10d-3db1d4bd609c",
+                "showEmbed": true,
+                "embed": {
+                    "id": "0184fdef-553d-7210-b10d-3db1d48378c7",
+                    "url": "https:\/\/twitter.com\/pilltimerapp\/status\/1569385013107359744",
+                    "response": null,
+                    "type": "Smolblog\\Core\\Post\\Blocks\\EmbedBlock"
+                },
+                "url": "https:\/\/twitter.com\/pilltimerapp\/status\/1569385013107359744",
+                "link": {
+                    "id": "0184fdef-553d-7210-b10d-3db1d406a21c",
+                    "url": "https:\/\/twitter.com\/pilltimerapp\/status\/1569385013107359744",
+                    "title": "PillTimer Support on Twitter",
+                    "summary": null,
+                    "thumbnailUrl": null,
+                    "pullQuote": "With iOS 16 now available, I\u2019m excited to announce version 3 of PillTimer. Fully rewritten from the ground up for todays devices, this version adds iCloud sync to the application. It\u2019s a great companion to Apple Health\u2019s new medicine tracking.\n\nhttps:\/\/t.co\/m14ihVGU9H",
+                    "pullQuoteCaption": "<a href='https:\/\/twitter.com\/pilltimerapp' rel='external' target='_blank'>PillTimer Support<\/a> on <a href='https:\/\/twitter.com\/pilltimerapp\/status\/1569385013107359744' rel='external' target='_blank'>September 12, 2022<\/a>",
+                    "type": "Smolblog\\Core\\Post\\Blocks\\LinkBlock"
+                },
+                "type": "Smolblog\\Core\\Post\\Blocks\\ReblogBlock"
+            },
+            {
+                "id": "0184fdef-553d-7210-b10d-3db1d4e1792b",
+                "content": "Here it is, y\u2019all! Fresh new version, fresh new website, same amazing graphics (shoutout to <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/andrewramos\" rel=\"external\" target=\"_blank\">@andrewramos<\/a>), same not-a-subscription pricing. ",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553d-7210-b10d-3db1d619f595",
+        "user_id": 1,
+        "timestamp": "2022-09-11T00:54:04.000+00:00",
+        "slug": "1568764779023548416",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553d-7210-b10d-3db1d52a2fca",
+                "content": "Welp, the <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/jackboxgames\" rel=\"external\" target=\"_blank\">@jackboxgames<\/a> Wheel has spoken... Sorry <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/sonic_hedgehog\" rel=\"external\" target=\"_blank\">@sonic_hedgehog<\/a>. <a href=\"https:\/\/twitter.com\/oddevan\/status\/1568764779023548416\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/4pog4E9rh4<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    },
+    {
+        "id": "0184fdef-553d-7210-b10d-3db1d80aed4b",
+        "user_id": 1,
+        "timestamp": "2022-09-10T21:35:55.000+00:00",
+        "slug": "1568714913551630336",
+        "title": null,
+        "content": [
+            {
+                "id": "0184fdef-553d-7210-b10d-3db1d67b1c7b",
+                "content": "You need to fix your \u201ctechnology\u201d <a class=\"tweet-url username\" href=\"https:\/\/twitter.com\/instagram\" rel=\"external\" target=\"_blank\">@instagram<\/a>; the account in question has a profile pic lifted from my account and a post lifted from my account <em>and nothing else.<\/em>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            },
+            {
+                "id": "0184fdef-553d-7210-b10d-3db1d7326b2d",
+                "content": "I\u2019m pretty sure my support request even said \u201cThis account is impersonating me.\u201d <a href=\"https:\/\/twitter.com\/oddevan\/status\/1568714913551630336\/photo\/1\" class=\"tweet-url\" rel=\"external\" target=\"_blank\">pic.twitter.com\/JAmr26fKUh<\/a>",
+                "styles": [],
+                "type": "Smolblog\\Core\\Post\\Blocks\\ParagraphBlock"
+            }
+        ],
+        "status": "published"
+    }
+]
