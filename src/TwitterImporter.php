@@ -118,6 +118,7 @@ class TwitterImporter implements Importer {
 		}//end foreach
 
 		$posts = [];
+		$threadParts = [];
 		foreach ($filtered as $importable) {
 			$tweet = $importable->postData;
 
@@ -127,6 +128,7 @@ class TwitterImporter implements Importer {
 				'slug' => $tweet->id,
 				'status' => PostStatus::Published,
 				'syndicationUrls' => [ $importable->url ],
+				'meta' => [ 'twitterId' => $tweet->id ],
 			];
 
 			$referencedTweets = array_filter(
@@ -135,8 +137,9 @@ class TwitterImporter implements Importer {
 			);
 
 			$reblogUrl = '';
+			$append = false;
 			if ($tweet->conversation_id !== $tweet->id) {
-				// $post['append_to'] = $tweet->conversation_id;
+				$append = true;
 			} elseif (!empty($referencedTweets)) {
 				$twid = $referencedTweets[0]->id;
 				$twRef = $tweetRef[$twid];
@@ -159,33 +162,24 @@ class TwitterImporter implements Importer {
 				}
 			}//end if
 
-			$text = $this->twitterLinker->autoLinkUsernamesAndLists(
-				$this->twitterLinker->autoLinkHashtags(
-					$this->twitterLinker->autoLinkCashtags($tweet->text)
-				)
+			$content = $this->getTweetContent(
+				mediaRef: $mediaRef,
+				tweetRef: $tweetRef,
+				reblogUrl: $reblogUrl,
+				entities: $tweet->entities ?? [],
+				text: $tweet->text,
 			);
-			foreach ($tweet->entities?->urls ?? [] as $tacolink) {
-				$replacement = '';
-				if (str_starts_with($tacolink->display_url, 'twitter.com')) {
-					if ($reblogUrl !== $tacolink->expanded_url) {
-						$replacement = "\n\n{$tacolink->expanded_url}\n\n";
-					}
-				} else {
-					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" " .
-						"target=\"_blank\">{$tacolink->display_url}</a>";
-				}
-				$text = str_replace($tacolink->url, $replacement, $text);
-			}
+			$postArgs['content'] = [ ...$postArgs['content'], ...$content ];
 			$postArgs['tags'] = array_map(fn($entity) => $entity->tag, $tweet->entities?->hashtags ?? []);
 
-			$blockTexts = array_map(fn($p) => nl2br($this->markdown->parseParagraph($p)), explode("\n\n", $text));
-			foreach ($blockTexts as $blockText) {
-				if (str_starts_with($blockText, 'https://twitter.com/')) {
-					$postArgs['content'][] = new EmbedBlock(url: $blockText);
-					continue;
-				}
-
-				$postArgs['content'][] = new ParagraphBlock(content: $blockText);
+			if ($append) {
+				$threadParts[] = [
+					'timestamp' => $postArgs['timestamp'],
+					'content' => $postArgs['content'],
+					'tags' => $postArgs['tags'],
+					'rootTweetId' => $tweet->conversation_id,
+				];
+				continue;
 			}
 
 			$posts[] = new Post(...$postArgs);
@@ -236,5 +230,56 @@ class TwitterImporter implements Importer {
 					"$authorName</a> on <a href='$url' rel='external' target='_blank'>$date</a>",
 			),
 		);
+	}
+
+	/**
+	 * Parse the text content of a tweet
+	 *
+	 * Creates links of entities and URLs. Embeds referenced tweets. Sets up images.
+	 *
+	 * @param array  $mediaRef  Referenced media in this batch.
+	 * @param array  $tweetRef  Referenced tweets in this batch.
+	 * @param string $reblogUrl Reblog URL for this tweet.
+	 * @param array  $entities  Listed entities for this tweet.
+	 * @param string $text      Unprocessed text for this tweet.
+	 * @return \Smolblog\Core\Post\Block[] Content of this tweet as blocks.
+	 */
+	private function getTweetContent(
+		array $mediaRef,
+		array $tweetRef,
+		string $reblogUrl,
+		array $entities,
+		string $text
+	): array {
+
+		$blockTexts = array_map(fn($p) => nl2br($this->markdown->parseParagraph($p)), explode("\n\n", $text));
+		foreach ($blockTexts as $blockText) {
+			$text = $this->twitterLinker->autoLinkUsernamesAndLists(
+				$this->twitterLinker->autoLinkHashtags(
+					$this->twitterLinker->autoLinkCashtags($tweet->text)
+				)
+			);
+			foreach ($tweet->entities?->urls ?? [] as $tacolink) {
+				$replacement = '';
+				if (str_starts_with($tacolink->display_url, 'twitter.com')) {
+					if ($reblogUrl !== $tacolink->expanded_url) {
+						$replacement = "\n\n{$tacolink->expanded_url}\n\n";
+					}
+				} else {
+					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" " .
+						"target=\"_blank\">{$tacolink->display_url}</a>";
+				}
+				$text = str_replace($tacolink->url, $replacement, $text);
+			}
+
+			if (str_starts_with($blockText, 'https://twitter.com/')) {
+				$postArgs['content'][] = new EmbedBlock(url: $blockText);
+				continue;
+			}
+
+			$postArgs['content'][] = new ParagraphBlock(content: $blockText);
+		}//end foreach
+
+		return [];
 	}
 }
