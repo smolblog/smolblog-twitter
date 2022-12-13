@@ -90,6 +90,33 @@ class TwitterImporter implements Importer {
 			];
 		}
 
+		$mediaRef = [];
+		foreach ($results->includes?->media ?? [] as $media) {
+			if ('photo' === $media->type) {
+				$mediaRef[$media->media_key] = [
+					'type' => 'image',
+					'url'  => $media->url,
+					'alt'  => $media->alt_text ?? 'Image from Twitter',
+				];
+			} elseif ('video' === $media->type || 'animated_gif' === $media->type) {
+				$video_url     = '#';
+				$video_bitrate = -1;
+				foreach ($media->variants as $vidinfo) {
+					if ('video/mp4' === $vidinfo->content_type && $vidinfo->bit_rate > $video_bitrate) {
+						$video_bitrate = $vidinfo->bit_rate;
+						$video_url     = $vidinfo->url;
+					}
+				}
+
+				$mediaRef[$media->media_key] = [
+					'type' => 'video',
+					'url'  => $video_url,
+					'alt'  => 'Video from Twitter',
+					'atts' => ( 'animated_gif' === $media->type ) ? 'autoplay loop ' : null,
+				];
+			}//end if
+		}//end foreach
+
 		$posts = [];
 		foreach ($filtered as $importable) {
 			$tweet = $importable->postData;
@@ -99,6 +126,7 @@ class TwitterImporter implements Importer {
 				'timestamp' => new DateTimeImmutable($tweet->created_at),
 				'slug' => $tweet->id,
 				'status' => PostStatus::Published,
+				'syndicationUrls' => [ $importable->url ],
 			];
 
 			$referencedTweets = array_filter(
@@ -123,6 +151,7 @@ class TwitterImporter implements Importer {
 						text: $twRef['text']
 					)
 				];
+				$postArgs['reblog'] = $reblogUrl;
 
 				if ($referencedTweets[0]->type === 'retweeted') {
 					// If this is a retweet without comment, we're done.
@@ -135,7 +164,7 @@ class TwitterImporter implements Importer {
 					$this->twitterLinker->autoLinkCashtags($tweet->text)
 				)
 			);
-			foreach ($tweet->entities->urls ?? [] as $tacolink) {
+			foreach ($tweet->entities?->urls ?? [] as $tacolink) {
 				$replacement = '';
 				if (str_starts_with($tacolink->display_url, 'twitter.com')) {
 					if ($reblogUrl !== $tacolink->expanded_url) {
@@ -147,6 +176,7 @@ class TwitterImporter implements Importer {
 				}
 				$text = str_replace($tacolink->url, $replacement, $text);
 			}
+			$postArgs['tags'] = array_map(fn($entity) => $entity->tag, $tweet->entities?->hashtags ?? []);
 
 			$blockTexts = array_map(fn($p) => nl2br($this->markdown->parseParagraph($p)), explode("\n\n", $text));
 			foreach ($blockTexts as $blockText) {
