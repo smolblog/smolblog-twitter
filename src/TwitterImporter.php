@@ -158,6 +158,7 @@ class TwitterImporter implements Importer {
 
 				if ($referencedTweets[0]->type === 'retweeted') {
 					// If this is a retweet without comment, we're done.
+					$posts[] = new Post(...$postArgs);
 					continue;
 				}
 			}//end if
@@ -251,27 +252,30 @@ class TwitterImporter implements Importer {
 		array $entities,
 		string $text
 	): array {
+		$blocks = [];
 
-		$blockTexts = array_map(fn($p) => nl2br($this->markdown->parseParagraph($p)), explode("\n\n", $text));
-		foreach ($blockTexts as $blockText) {
-			$text = $this->twitterLinker->autoLinkUsernamesAndLists(
-				$this->twitterLinker->autoLinkHashtags(
-					$this->twitterLinker->autoLinkCashtags($tweet->text)
-				)
-			);
-			foreach ($tweet->entities?->urls ?? [] as $tacolink) {
-				$replacement = '';
-				if (str_starts_with($tacolink->display_url, 'twitter.com')) {
-					if ($reblogUrl !== $tacolink->expanded_url) {
-						$replacement = "\n\n{$tacolink->expanded_url}\n\n";
-					}
-				} else {
-					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" " .
-						"target=\"_blank\">{$tacolink->display_url}</a>";
+		$text = $this->twitterLinker->autoLinkUsernamesAndLists(
+			$this->twitterLinker->autoLinkHashtags(
+				$this->twitterLinker->autoLinkCashtags($tweet->text)
+			)
+		);
+
+		foreach ($entities?->urls ?? [] as $tacolink) {
+			$replacement = '';
+			if (isset($tacolink->media_key)) {
+			} elseif (str_starts_with($tacolink->display_url, 'twitter.com')) {
+				if ($reblogUrl !== $tacolink->expanded_url) {
+					$replacement = "\n\n{$tacolink->expanded_url}\n\n";
 				}
-				$text = str_replace($tacolink->url, $replacement, $text);
+			} else {
+				$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" " .
+					"target=\"_blank\">{$tacolink->display_url}</a>";
 			}
+			$text = str_replace($tacolink->url, $replacement, $text);
+		}
 
+		$paragraphs = array_map(fn($p) => nl2br($this->markdown->parseParagraph($p)), explode("\n\n", $text));
+		foreach ($paragraphs as $paragraph) {
 			if (str_starts_with($blockText, 'https://twitter.com/')) {
 				$postArgs['content'][] = new EmbedBlock(url: $blockText);
 				continue;
