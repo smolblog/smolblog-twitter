@@ -50,7 +50,7 @@ final class TwitterImporterTest extends TestCase {
 		);
 
 		$results = $importer->getPostsFromChannel(connection: $connection, channel: $channel, options: []);
-		$json = json_encode($results->posts, JSON_PRETTY_PRINT);
+		$json = json_encode($results, JSON_PRETTY_PRINT);
 
 		// echo "\n\n---\n$json\n---\n\n";
 		if (false === file_put_contents(__DIR__ . '/parsed_tweets.json', $json)) {

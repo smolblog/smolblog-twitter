@@ -6,9 +6,9 @@ use DateTimeImmutable;
 use DateTimeInterface;
 use cebe\markdown\Markdown;
 use Smolblog\Core\Connector\Entities\{Connection, Channel};
-use Smolblog\Core\Importer\{ImportablePost, Importer, ImportResults, RemoveAlreadyImported};
-use Smolblog\Core\Post\{Post, PostStatus};
-use Smolblog\Core\Post\Blocks\{EmbedBlock, LinkBlock, ParagraphBlock, ReblogBlock};
+use Smolblog\Core\Importer\{ImportablePost, Importer, ImportResults, RemoveAlreadyImported, PullFromChannel};
+use Smolblog\Core\Post\{Media, Post, PostStatus};
+use Smolblog\Core\Post\Blocks\{EmbedBlock, ParagraphBlock, ImageBlock, VideoBlock};
 use Smolblog\Framework\Identifier;
 use Twitter\Text\Autolink;
 
@@ -97,6 +97,7 @@ class TwitterImporter implements Importer {
 					'type' => 'image',
 					'url'  => $media->url,
 					'alt'  => $media->alt_text ?? 'Image from Twitter',
+					'atts' => [],
 				];
 			} elseif ('video' === $media->type || 'animated_gif' === $media->type) {
 				$video_url     = '#';
@@ -112,7 +113,7 @@ class TwitterImporter implements Importer {
 					'type' => 'video',
 					'url'  => $video_url,
 					'alt'  => 'Video from Twitter',
-					'atts' => ( 'animated_gif' === $media->type ) ? 'autoplay loop ' : null,
+					'atts' => ( 'animated_gif' === $media->type ) ? [ 'autoplay' => 'autoplay', 'loop' => 'loop' ] : [],
 				];
 			}//end if
 		}//end foreach
@@ -129,6 +130,7 @@ class TwitterImporter implements Importer {
 				'status' => PostStatus::Published,
 				'syndicationUrls' => [ $importable->url ],
 				'meta' => [ 'twitterId' => $tweet->id ],
+				'content' => [],
 			];
 
 			$referencedTweets = array_filter(
@@ -145,15 +147,7 @@ class TwitterImporter implements Importer {
 				$twRef = $tweetRef[$twid];
 
 				$reblogUrl = $this->getTweetUrl(authorHandle: $twRef['author']['username'], tweetId: $twid);
-				$postArgs['content'] = [
-					$this->getReblogBlock(
-						tweetId: $twid,
-						authorName: $twRef['author']['name'],
-						authorHandle: $twRef['author']['username'],
-						timestamp: $twRef['timestamp'],
-						text: $twRef['text']
-					)
-				];
+				$postArgs['content'] = [ new EmbedBlock(url: $reblogUrl) ];
 				$postArgs['reblog'] = $reblogUrl;
 
 				if ($referencedTweets[0]->type === 'retweeted') {
@@ -168,25 +162,46 @@ class TwitterImporter implements Importer {
 				tweetRef: $tweetRef,
 				reblogUrl: $reblogUrl,
 				entities: $tweet->entities ?? [],
+				attachments: $tweet->attachments ?? [],
 				text: $tweet->text,
 			);
-			$postArgs['content'] = [ ...$postArgs['content'], ...$content ];
+			$postArgs['content'] = [ ...$content, ...$postArgs['content'] ];
 			$postArgs['tags'] = array_map(fn($entity) => $entity->tag, $tweet->entities?->hashtags ?? []);
 
 			if ($append) {
-				$threadParts[] = [
+				$threadParts[$tweet->conversation_id] ??= [];
+				$threadParts[$tweet->conversation_id][] = [
 					'timestamp' => $postArgs['timestamp'],
 					'content' => $postArgs['content'],
 					'tags' => $postArgs['tags'],
-					'rootTweetId' => $tweet->conversation_id,
+					'url' => $importable->url,
 				];
 				continue;
+			}
+
+			if (!empty($threadParts[$tweet->id])) {
+				usort($threadParts[$tweet->id], fn($a, $b) => $a['timestamp'] <= $b['timestamp'] ? -1 : 1);
+				foreach ($threadParts[$tweet->id] as $part) {
+					$postArgs['content'] = [...$postArgs['content'], ...$part['content']];
+					$postArgs['tags'] = [...$postArgs['tags'], ...$part['tags']];
+					$postArgs['syndicationUrls'][] = $part['url'];
+				}
+				unset($threadParts[$tweet->id]);
 			}
 
 			$posts[] = new Post(...$postArgs);
 		}//end foreach
 
-		return new ImportResults(posts: $posts);
+		return new ImportResults(
+			posts: $posts,
+			nextPageCommand: new PullFromChannel(
+				channelId: $channel->id,
+				options: [
+					'nextPageToken' => $results->meta->next_token,
+					'unresolvedThreadParts' => $threadParts,
+				]
+			),
+		);
 	}
 
 	/**
@@ -201,68 +216,36 @@ class TwitterImporter implements Importer {
 	}
 
 	/**
-	 * Create a Reblog Block from the given info
-	 *
-	 * @param string            $tweetId      ID of the tweet.
-	 * @param string            $authorName   Tweet author's display name.
-	 * @param string            $authorHandle Tweet author's handle.
-	 * @param DateTimeInterface $timestamp    Time and date of the tweet.
-	 * @param string            $text         Text content of the tweet.
-	 * @return ReblogBlock
-	 */
-	private function getReblogBlock(
-		string $tweetId,
-		string $authorName,
-		string $authorHandle,
-		DateTimeInterface $timestamp,
-		string $text
-	): ReblogBlock {
-		$url = $this->getTweetUrl($authorHandle, $tweetId);
-		$date = $timestamp->format('F j, Y');
-
-		return new ReblogBlock(
-			url: $url,
-			link: new LinkBlock(
-				url: $url,
-				title: "$authorName on Twitter",
-				pullQuote: $text,
-				pullQuoteCaption:
-					"<a href='https://twitter.com/$authorHandle' rel='external' target='_blank'>" .
-					"$authorName</a> on <a href='$url' rel='external' target='_blank'>$date</a>",
-			),
-		);
-	}
-
-	/**
 	 * Parse the text content of a tweet
 	 *
 	 * Creates links of entities and URLs. Embeds referenced tweets. Sets up images.
 	 *
-	 * @param array  $mediaRef  Referenced media in this batch.
-	 * @param array  $tweetRef  Referenced tweets in this batch.
-	 * @param string $reblogUrl Reblog URL for this tweet.
-	 * @param array  $entities  Listed entities for this tweet.
-	 * @param string $text      Unprocessed text for this tweet.
+	 * @param array  $mediaRef    Referenced media in this batch.
+	 * @param array  $tweetRef    Referenced tweets in this batch.
+	 * @param string $reblogUrl   Reblog URL for this tweet.
+	 * @param mixed  $entities    Listed entities for this tweet.
+	 * @param mixed  $attachments Attachments for this tweet.
+	 * @param string $text        Unprocessed text for this tweet.
 	 * @return \Smolblog\Core\Post\Block[] Content of this tweet as blocks.
 	 */
 	private function getTweetContent(
 		array $mediaRef,
 		array $tweetRef,
 		string $reblogUrl,
-		array $entities,
+		mixed $entities,
+		mixed $attachments,
 		string $text
 	): array {
-		$blocks = [];
-
 		$text = $this->twitterLinker->autoLinkUsernamesAndLists(
 			$this->twitterLinker->autoLinkHashtags(
-				$this->twitterLinker->autoLinkCashtags($tweet->text)
+				$this->twitterLinker->autoLinkCashtags($text)
 			)
 		);
 
 		foreach ($entities?->urls ?? [] as $tacolink) {
 			$replacement = '';
-			if (isset($tacolink->media_key)) {
+			if (isset($tacolink->media_key) || str_starts_with($tacolink->display_url, 'twitter.com/i/')) {
+				// This is a media link; remove it from the text.
 			} elseif (str_starts_with($tacolink->display_url, 'twitter.com')) {
 				if ($reblogUrl !== $tacolink->expanded_url) {
 					$replacement = "\n\n{$tacolink->expanded_url}\n\n";
@@ -274,16 +257,43 @@ class TwitterImporter implements Importer {
 			$text = str_replace($tacolink->url, $replacement, $text);
 		}
 
-		$paragraphs = array_map(fn($p) => nl2br($this->markdown->parseParagraph($p)), explode("\n\n", $text));
+		$blocks = [];
+		$paragraphs = array_map(fn($p) => trim(nl2br($this->markdown->parseParagraph($p))), explode("\n\n", $text));
 		foreach ($paragraphs as $paragraph) {
-			if (str_starts_with($blockText, 'https://twitter.com/')) {
-				$postArgs['content'][] = new EmbedBlock(url: $blockText);
+			if (!$paragraph) {
 				continue;
 			}
 
-			$postArgs['content'][] = new ParagraphBlock(content: $blockText);
+			if (str_starts_with($paragraph, 'https://twitter.com/')) {
+				$blocks[] = new EmbedBlock(url: $paragraph);
+				continue;
+			}
+
+			$blocks[] = new ParagraphBlock(content: $paragraph);
 		}//end foreach
 
-		return [];
+		return [
+			...$blocks,
+			...array_map(
+				fn($mediaKey) =>
+					$mediaRef[$mediaKey]['type'] == 'video' ?
+						new VideoBlock(
+							media: new Media(
+								url: $mediaRef[$mediaKey]['url'],
+								descriptiveText: $mediaRef[$mediaKey]['alt'],
+								attributes: $mediaRef[$mediaKey]['atts'],
+							)
+						)
+					:
+						new ImageBlock(
+							media: new Media(
+								url: $mediaRef[$mediaKey]['url'],
+								descriptiveText: $mediaRef[$mediaKey]['alt'],
+								attributes: $mediaRef[$mediaKey]['atts'],
+							)
+						),
+				$attachments->media_keys ?? []
+			),
+		];
 	}
 }
