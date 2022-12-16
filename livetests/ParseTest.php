@@ -4,11 +4,13 @@ namespace Smolblog\Twitter;
 
 use DateTime;
 use DateTimeInterface;
-use function nl2br;
 use PHPUnit\Framework\TestCase;
-use Smolblog\Core\Connector\Entities\Connection;
+use Smolblog\Core\Connector\Entities\{Connection, Channel};
+use Smolblog\Core\Importer\{ImportResults, RemoveAlreadyImported};
 use Smolblog\Core\Post\Blocks\{EmbedBlock, LinkBlock, ParagraphBlock, ReblogBlock};
 use Coderjerk\BirdElephant\BirdElephant;
+use cebe\markdown\Markdown;
+use Twitter\Text\Autolink;
 
 require_once 'cred.php';
 
@@ -18,112 +20,34 @@ class ParseTest extends TestCase {
 		$this->connection = createCredential();
 	}
 
-	public function testParsingCorrectly() {
-		$birdsite = new BirdElephant(['bearer_token' => $this->connection->details['accessToken']]);
-		$markdown = new \cebe\markdown\Markdown();
+	public function testPostsAreRetrieved() {
+		$removeService = $this->createStub(RemoveAlreadyImported::class);
+		$removeService->method('run')->willReturnArgument(0);
 
-		$params = [
-			'tweet.fields' => 'attachments,author_id,conversation_id,created_at,edit_controls,entities,id,referenced_tweets,text,withheld',
-			'expansions' => 'attachments.media_keys,author_id,edit_history_tweet_ids,entities.mentions.username,referenced_tweets.id,referenced_tweets.id.author_id',
-			'exclude' => 'replies',
-			'media.fields' => 'height,media_key,type,url,width,alt_text,variants',
-			'user.fields' => 'entities,id,name,protected,url,username',
-			'max_results' => 15
-		];
+		$importer = new TwitterImporter(
+			filterService: $removeService,
+			factory: new BirdElephantFactory(new \Smolblog\App\Environment(apiBase: '//', twitterAppId: 'abc', twitterAppSecret: 'abc')),
+			twitterLinker: Autolink::create()->setNoFollow(false)->setUsernameIncludeSymbol(true),
+			markdown: new Markdown(),
+		);
 
-		$results = $birdsite->user($this->connection->displayName)->tweets($params);
+		$connection = createCredential();
+		$channel = new Channel(
+			connectionId: $connection->id,
+			channelKey: $connection->providerKey,
+			displayName: $connection->displayName,
+			details: [],
+		);
 
-		$authorsRef = [];
-		foreach ($results->includes?->users ?? [] as $user) {
-			if ($user->id === $this->connection->providerKey) { continue; }
+		$results = $importer->getPostsFromChannel(connection: $connection, channel: $channel, options: []);
+		// $json = json_encode($results, JSON_PRETTY_PRINT);
 
-			$authorsRef[$user->id] = [
-				'name' => $user->name,
-				'username' => $user->username,
-			];
+		// echo "\n\n---\n$json\n---\n\n";
+		if (false === file_put_contents(__DIR__ . '/print_r.txt', print_r($results, true))) {
+			echo "File write failed!\n";
 		}
 
-		$tweetRef = [];
-		foreach ($results->includes?->tweets ?? [] as $tweet) {
-			if ($tweet->author_id === $this->connection->providerKey) { continue; }
-
-			$tweetRef[$tweet->id] = [
-				'timestamp' => new DateTime($tweet->created_at),
-				'text' => $tweet->text,
-				'author' => $authorsRef[$tweet->author_id],
-			];
-		}
-
-		$linker = \Twitter\Text\Autolink::create()
-			->setNoFollow(false)
-			->setUsernameIncludeSymbol(true);
-
-		$posts = array_map(function($tweet) use($tweetRef, $markdown, $linker) {
-			$post = [
-				'timestamp' => new DateTime($tweet->created_at),
-				'id' => $tweet->id,
-				'blocks' => [],
-			];
-
-			$referencedTweets = array_filter(
-				$tweet->referenced_tweets ?? [],
-				fn($ref) => $ref->type !== 'replied_to'
-			);
-
-			$reblogUrl = '';
-			if ($tweet->conversation_id !== $tweet->id) {
-				$post['append_to'] = $tweet->conversation_id;
-			} elseif (!empty($referencedTweets)) {
-				$twid = $referencedTweets[0]->id;
-				$twRef = $tweetRef[$twid];
-
-				$reblogUrl = $this->makeUrl(authorHandle: $twRef['author']['username'], tweetId: $twid);
-				$post['blocks'] = [
-					$this->getReblogBlock(
-						tweetId: $twid,
-						authorName: $twRef['author']['name'],
-						authorHandle: $twRef['author']['username'],
-						timestamp: $twRef['timestamp'],
-						text: $twRef['text']
-					)
-				];
-
-				if ($referencedTweets[0]->type === 'retweeted') {
-					// If this is a retweet without comment, we're done.
-					return $post;
-				}
-			}
-
-			$text = $linker->autoLinkUsernamesAndLists($linker->autoLinkHashtags($linker->autoLinkCashtags($tweet->text)));
-			foreach ($tweet->entities->urls ?? [] as $tacolink) {
-				$replacement = '';
-				if (str_starts_with($tacolink->display_url, 'twitter.com')) {
-					if ($reblogUrl !== $tacolink->expanded_url) {
-						$replacement = "\n\n{$tacolink->expanded_url}\n\n";
-					}
-				} else {
-					$replacement = "<a href=\"{$tacolink->expanded_url}\" class=\"tweet-url\" rel=\"external\" ".
-						"target=\"_blank\">{$tacolink->display_url}</a>";
-				}
-				$text = str_replace($tacolink->url, $replacement, $text);
-			}
-
-			$blockTexts = array_map(fn($p) => nl2br($markdown->parseParagraph($p)), explode("\n\n", $text));
-			foreach ($blockTexts as $blockText) {
-				if (str_starts_with($blockText, 'https://twitter.com/')) {
-					$post['blocks'][] = new EmbedBlock(url: $blockText);
-					continue;
-				}
-
-				$post['blocks'][] = new ParagraphBlock(content: $blockText);
-			}
-
-			return $post;
-		}, $results->data);
-
-		print_r($posts);
-
-		$this->assertInstanceOf(BirdElephant::class, $birdsite);
+		$this->assertInstanceOf(ImportResults::class, $results);
 	}
 
 	private function makeUrl(

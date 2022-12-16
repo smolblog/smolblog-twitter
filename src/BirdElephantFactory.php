@@ -3,7 +3,7 @@
 namespace Smolblog\Twitter;
 
 use Coderjerk\BirdElephant\BirdElephant;
-use Smolblog\Core\Environment;
+use Smolblog\App\Environment;
 
 /**
  * Factory for creating BirdElephant objects with either a bearer token or app creds

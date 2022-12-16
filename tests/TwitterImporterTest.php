@@ -53,9 +53,9 @@ final class TwitterImporterTest extends TestCase {
 		$json = json_encode($results, JSON_PRETTY_PRINT);
 
 		// echo "\n\n---\n$json\n---\n\n";
-		if (false === file_put_contents(__DIR__ . '/parsed_tweets.json', $json)) {
-			echo "File write failed!\n";
-		}
+		// if (false === file_put_contents(__DIR__ . '/parsed_tweets.json', $json)) {
+		// 	echo "File write failed!\n";
+		// }
 
 		$this->assertInstanceOf(ImportResults::class, $results);
 	}

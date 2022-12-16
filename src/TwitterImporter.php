@@ -7,7 +7,7 @@ use DateTimeInterface;
 use cebe\markdown\Markdown;
 use Smolblog\Core\Connector\Entities\{Connection, Channel};
 use Smolblog\Core\Importer\{ImportablePost, Importer, ImportResults, RemoveAlreadyImported, PullFromChannel};
-use Smolblog\Core\Post\{Media, Post, PostStatus};
+use Smolblog\Core\Post\{MediaToSideload, Post, PostStatus};
 use Smolblog\Core\Post\Blocks\{EmbedBlock, ParagraphBlock, ImageBlock, VideoBlock};
 use Smolblog\Framework\Identifier;
 use Twitter\Text\Autolink;
@@ -52,8 +52,12 @@ class TwitterImporter implements Importer {
 			'exclude' => 'replies',
 			'media.fields' => 'height,media_key,type,url,width,alt_text,variants',
 			'user.fields' => 'entities,id,name,protected,url,username',
-			'max_results' => 15
+			'max_results' => 100
 		];
+		if (!empty($options['nextPageToken'])) {
+			$params['pagination_token'] = $options['nextPageToken'];
+		}
+
 		$results = $birdsite->user($connection->displayName)->tweets($params);
 
 		$filtered = $this->filterService->run(posts: array_map(
@@ -119,7 +123,7 @@ class TwitterImporter implements Importer {
 		}//end foreach
 
 		$posts = [];
-		$threadParts = [];
+		$threadParts = $options['unresolvedThreadParts'] ?? [];
 		foreach ($filtered as $importable) {
 			$tweet = $importable->postData;
 
@@ -278,7 +282,7 @@ class TwitterImporter implements Importer {
 				fn($mediaKey) =>
 					$mediaRef[$mediaKey]['type'] == 'video' ?
 						new VideoBlock(
-							media: new Media(
+							media: new MediaToSideload(
 								url: $mediaRef[$mediaKey]['url'],
 								descriptiveText: $mediaRef[$mediaKey]['alt'],
 								attributes: $mediaRef[$mediaKey]['atts'],
@@ -286,7 +290,7 @@ class TwitterImporter implements Importer {
 						)
 					:
 						new ImageBlock(
-							media: new Media(
+							media: new MediaToSideload(
 								url: $mediaRef[$mediaKey]['url'],
 								descriptiveText: $mediaRef[$mediaKey]['alt'],
 								attributes: $mediaRef[$mediaKey]['atts'],
